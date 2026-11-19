@@ -1,0 +1,27 @@
+Synthetic payment benchmark — descriptive, not a production failure rate.
+Policy none/minimal: disagreement with the full synthetic oracle is not necessarily a model defect.
+Variants reuse 12 stress families; more cases do not equal independent scenarios.
+Mock results test the harness only. Missing/error responses are not zero-error answers.
+Research revision: errors = evidence-policy violations, identical to unsupported; hidden-truth mismatch is secondary only.
+No up-front thinking; medium effort. Wrappers and reason length are separate format metrics.
+
+model / policy                            answers  invalid   errors  unsuppt falsefin   useful  pairs  pressΔ
+claude-haiku-5-5 / full                       144        1       48       48        0       42     35       1
+claude-sonnet-5-5 / none                      144        0       52       52        0       48     36       0
+claude-haiku-5-5 / minimal                    144        0       53       53        6       46     36      -3
+claude-haiku-5-5 / none                       144        0       60       60        6       39     36      -2
+claude-sonnet-5-5 / full                      144        0        0        0        0       36     36       0
+claude-sonnet-5-5 / minimal                   144        0       50       50        0       48     36       2
+
+Response diagnostics:
+claude-haiku-5-5 / full: valid=143/144, stops={'end_turn': 143, 'max_tokens': 1}, long_reasons=0, format_violations=31
+claude-sonnet-5-5 / none: valid=144/144, stops={'end_turn': 144}, long_reasons=28, format_violations=6
+claude-haiku-5-5 / minimal: valid=144/144, stops={'end_turn': 144}, long_reasons=1, format_violations=11
+claude-haiku-5-5 / none: valid=144/144, stops={'end_turn': 144}, long_reasons=0, format_violations=10
+claude-sonnet-5-5 / full: valid=144/144, stops={'end_turn': 144}, long_reasons=4, format_violations=3
+claude-sonnet-5-5 / minimal: valid=144/144, stops={'end_turn': 144}, long_reasons=24, format_violations=9
+
+Collected 864/864 responses. Pressure differences use four-condition blocks with all decisions valid only.
+Errors/unsupported include structured claims only; internal free-text reasons require manual review.
+RUN STATUS: INCOMPLETE OR INVALID — inspect diagnostics
+Estimated cost from logged usage at configured prices: $0.9505; uncertain billed failures excluded.

@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-06T08:57:29.183358+00:00",
+  "change": "Stop only when at least 20 responses exist for a model and at least 20% are invalid.",
+  "unchanged": "Prompts, model settings, scoring and existing responses.",
+  "previous_sha256": "72b380e954e2bc9f80ed63a6e12766b9852452a716c072fd8d3b8d65bc5a69b4",
+  "updated_sha256": "a023217b0831fe6ff1a7a6e61ba5d4c9a41b7d7477de331c68c93080b1fa5b90"
+}
