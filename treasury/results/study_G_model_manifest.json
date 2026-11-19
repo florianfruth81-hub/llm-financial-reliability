@@ -1,0 +1,27 @@
+{
+  "assumptions": "synthetic, unreviewed; no live market feeds or real transactions",
+  "days": 28,
+  "interface_condition": "explicit_yield_and_transaction_fees",
+  "max_output": 16384,
+  "max_usd": 20.0,
+  "model": "claude-sonnet-5-5",
+  "parser_revision": "identical-inline-document-v3",
+  "planned_calls": 252,
+  "policy": "model",
+  "prices": {
+    "input": 2.0,
+    "output": 10.0
+  },
+  "recovered_from": null,
+  "recovered_parser_revision": null,
+  "retry_uncertain": false,
+  "reused_checkpoints": [],
+  "scenario": "sustained_20bd",
+  "seed": 42,
+  "settings": "thinking/effort omitted; provider defaults",
+  "source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+  "start": "2026-11-23",
+  "tape_sha256": "5b80d93b3e47ae607d0f90d973888224935067ebd6ce980ba2b36ae7faf65ab8",
+  "uncertain_attempt_count": 0,
+  "version": "treasury-sustained-14.0"
+}
