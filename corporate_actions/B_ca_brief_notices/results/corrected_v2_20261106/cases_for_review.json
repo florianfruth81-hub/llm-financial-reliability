@@ -1,0 +1,2630 @@
+[
+  {
+    "id": "certification/original",
+    "family": "certification",
+    "variant": "original",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Beneficial-owner certification is required before an election can be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_certificate",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "certification/paraphrase",
+    "family": "certification",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Submission is conditional upon prior receipt of beneficial-owner certification."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_certificate",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "certification/typos",
+    "family": "certification",
+    "variant": "typos",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Beneficial-owner certificaton is requried before an election can be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_certificate",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "certification/meaning_change",
+    "family": "certification",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Beneficial-owner certification is not required before an election can be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_required",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "certification/amendment",
+    "family": "certification",
+    "variant": "amendment",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Beneficial-owner certification is required before an election can be submitted."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Beneficial-owner certification is not required before an election can be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_required",
+      "action": "submit",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "certification/conflict",
+    "family": "certification",
+    "variant": "conflict",
+    "visible": {
+      "question": "Is the required beneficial-owner certification satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "A valid customer election is held. No certificate is on file. Submit only if this event does not require certification; otherwise request it."
+        },
+        {
+          "id": "E1",
+          "text": "Beneficial-owner certification is required before an election can be submitted."
+        },
+        {
+          "id": "E2",
+          "text": "Beneficial-owner certification is not required before an election can be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "not_required",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_certificate",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "revocation/original",
+    "family": "revocation",
+    "variant": "original",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Elections are revocable during the withdrawal window."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "permitted",
+      "action": "withdraw",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "revocation/paraphrase",
+    "family": "revocation",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "A holder may revoke an election while the withdrawal window remains open."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "permitted",
+      "action": "withdraw",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "revocation/typos",
+    "family": "revocation",
+    "variant": "typos",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Elections are revocble during the withdrawl window."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "permitted",
+      "action": "withdraw",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "revocation/meaning_change",
+    "family": "revocation",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Elections are not revocable during the withdrawal window."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "prohibited",
+      "action": "retain_and_notify",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "revocation/amendment",
+    "family": "revocation",
+    "variant": "amendment",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Elections are revocable during the withdrawal window."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Elections are not revocable during the withdrawal window."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "prohibited",
+      "action": "retain_and_notify",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "revocation/conflict",
+    "family": "revocation",
+    "variant": "conflict",
+    "visible": {
+      "question": "Can the existing election be withdrawn now?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Elections are revocable during the withdrawal window."
+        },
+        {
+          "id": "E2",
+          "text": "Elections are not revocable during the withdrawal window."
+        }
+      ],
+      "finding_labels": [
+        "permitted",
+        "prohibited",
+        "unclear"
+      ],
+      "action_labels": [
+        "withdraw",
+        "retain_and_notify",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "waiver/original",
+    "family": "waiver",
+    "variant": "original",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "The offeror may waive the minimum-acceptance condition."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_waived",
+      "action": "withhold_completion_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "waiver/paraphrase",
+    "family": "waiver",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "The offeror retains discretion to waive the minimum acceptance requirement; no waiver is announced."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_waived",
+      "action": "withhold_completion_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "waiver/typos",
+    "family": "waiver",
+    "variant": "typos",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "The offeror may waive the minimum-acceptnce conditon."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_waived",
+      "action": "withhold_completion_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "waiver/meaning_change",
+    "family": "waiver",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "The offeror has waived the minimum-acceptance condition."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "waived",
+      "action": "release_completion_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "waiver/amendment",
+    "family": "waiver",
+    "variant": "amendment",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: The offeror may waive the minimum-acceptance condition."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. The offeror has waived the minimum-acceptance condition."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "waived",
+      "action": "release_completion_notice",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "waiver/conflict",
+    "family": "waiver",
+    "variant": "conflict",
+    "visible": {
+      "question": "Has the minimum-acceptance condition actually been waived?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+        },
+        {
+          "id": "E1",
+          "text": "As of 12:00 UTC today, the minimum-acceptance condition has NOT been waived."
+        },
+        {
+          "id": "E2",
+          "text": "As of 12:00 UTC today, the minimum-acceptance condition HAS been waived."
+        }
+      ],
+      "finding_labels": [
+        "not_waived",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "withhold_completion_notice",
+        "release_completion_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "deadline/original",
+    "family": "deadline",
+    "variant": "original",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "open",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "deadline/paraphrase",
+    "family": "deadline",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "Issuer cut-off: 16:00 UTC today. Instructions must reach this custodian before 14:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "open",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "deadline/typos",
+    "family": "deadline",
+    "variant": "typos",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "The issuer deadline is 16:00 UTC. Our custodian instrucion deadline is 14:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "open",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "deadline/meaning_change",
+    "family": "deadline",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 11:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "closed",
+      "action": "request_late_exception",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "deadline/amendment",
+    "family": "deadline",
+    "variant": "amendment",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 11:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "closed",
+      "action": "request_late_exception",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "deadline/conflict",
+    "family": "deadline",
+    "variant": "conflict",
+    "visible": {
+      "question": "Is the custodian instruction deadline still open at the stated current time?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+        },
+        {
+          "id": "E1",
+          "text": "The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today."
+        },
+        {
+          "id": "E2",
+          "text": "The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 11:00 UTC today."
+        }
+      ],
+      "finding_labels": [
+        "open",
+        "closed",
+        "unclear"
+      ],
+      "action_labels": [
+        "submit",
+        "request_late_exception",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/original",
+    "family": "resubmission",
+    "variant": "original",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Previously accepted elections remain valid. Do not resubmit unchanged instructions."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_required",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/paraphrase",
+    "family": "resubmission",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Accepted instructions continue in force; sending the same instruction again is unnecessary and must be avoided."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_required",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/typos",
+    "family": "resubmission",
+    "variant": "typos",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Previously accpted elections remain valid. Do not resubmt unchanged instructions."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_required",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/meaning_change",
+    "family": "resubmission",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Previously accepted elections are cancelled. Resubmit unchanged instructions to maintain the election."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "resubmit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/amendment",
+    "family": "resubmission",
+    "variant": "amendment",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Previously accepted elections remain valid. Do not resubmit unchanged instructions."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Previously accepted elections are cancelled. Resubmit unchanged instructions to maintain the election."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "resubmit",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "resubmission/conflict",
+    "family": "resubmission",
+    "variant": "conflict",
+    "visible": {
+      "question": "Does the notice require resubmission of the existing election?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An election was accepted before the amendment and matches current customer intent. Customer authorises resubmission only if required. If earlier elections remain effective, retain them and do not create a duplicate."
+        },
+        {
+          "id": "E1",
+          "text": "Previously accepted elections remain valid. Do not resubmit unchanged instructions."
+        },
+        {
+          "id": "E2",
+          "text": "Previously accepted elections are cancelled. Resubmit unchanged instructions to maintain the election."
+        }
+      ],
+      "finding_labels": [
+        "not_required",
+        "required",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "resubmit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "fractions/original",
+    "family": "fractions",
+    "variant": "original",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Fractional entitlements will be paid in cash; whole-share entitlements are unaffected."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_in_lieu",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "fractions/paraphrase",
+    "family": "fractions",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Holders receive a cash payment instead of fractional shares; whole shares are delivered normally."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_in_lieu",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "fractions/typos",
+    "family": "fractions",
+    "variant": "typos",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Fractional entitlements will be paid in cash; whole-share entitlemnts are unaffectd."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_in_lieu",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "fractions/meaning_change",
+    "family": "fractions",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Fractional entitlements will be rounded down without cash compensation; whole-share entitlements are unaffected."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "round_down",
+      "action": "prepare_round_down",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "fractions/amendment",
+    "family": "fractions",
+    "variant": "amendment",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Fractional entitlements will be paid in cash; whole-share entitlements are unaffected."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Fractional entitlements will be rounded down without cash compensation; whole-share entitlements are unaffected."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "round_down",
+      "action": "prepare_round_down",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "fractions/conflict",
+    "family": "fractions",
+    "variant": "conflict",
+    "visible": {
+      "question": "How must fractional entitlements be treated?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account has a fractional entitlement. Once the method is clear, prepare that treatment for review; this is not permission to execute a cash or securities booking."
+        },
+        {
+          "id": "E1",
+          "text": "Fractional entitlements will be paid in cash; whole-share entitlements are unaffected."
+        },
+        {
+          "id": "E2",
+          "text": "Fractional entitlements will be rounded down without cash compensation; whole-share entitlements are unaffected."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "round_down",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_in_lieu",
+        "prepare_round_down",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/original",
+    "family": "eligibility",
+    "variant": "original",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "The offer is not open to beneficial owners resident in Canada."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "ineligible",
+      "action": "block_and_notify",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/paraphrase",
+    "family": "eligibility",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Canadian-resident beneficial owners are excluded from participation in this offer."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "ineligible",
+      "action": "block_and_notify",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/typos",
+    "family": "eligibility",
+    "variant": "typos",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "The offer is not open to beneficial ownrs residnt in Canada."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "ineligible",
+      "action": "block_and_notify",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/meaning_change",
+    "family": "eligibility",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "The offer is open to beneficial owners resident in Canada."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "eligible",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/amendment",
+    "family": "eligibility",
+    "variant": "amendment",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: The offer is not open to beneficial owners resident in Canada."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. The offer is open to beneficial owners resident in Canada."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "eligible",
+      "action": "submit",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "eligibility/conflict",
+    "family": "eligibility",
+    "variant": "conflict",
+    "visible": {
+      "question": "Is this account eligible to participate under the residence restriction?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The beneficial owner is resident in Canada. A valid customer instruction is held. Submit only if the owner is eligible; otherwise block submission and notify the customer."
+        },
+        {
+          "id": "E1",
+          "text": "The offer is not open to beneficial owners resident in Canada."
+        },
+        {
+          "id": "E2",
+          "text": "The offer is open to beneficial owners resident in Canada."
+        }
+      ],
+      "finding_labels": [
+        "ineligible",
+        "eligible",
+        "unclear"
+      ],
+      "action_labels": [
+        "block_and_notify",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "funds/original",
+    "family": "funds",
+    "variant": "original",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "Payment will be made upon receipt of funds. The payment date remains indicative."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_funding",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "funds/paraphrase",
+    "family": "funds",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "Distribution depends on funds arriving; their receipt is not confirmed and the stated date is provisional."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_funding",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "funds/typos",
+    "family": "funds",
+    "variant": "typos",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "Payment will be made upon reciept of funds. The payment date remains indicatve."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_funding",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "funds/meaning_change",
+    "family": "funds",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "Payment funds have been received. The payment date remains indicative."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "confirmed",
+      "action": "release_funds_received_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "funds/amendment",
+    "family": "funds",
+    "variant": "amendment",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Payment will be made upon receipt of funds. The payment date remains indicative."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Payment funds have been received. The payment date remains indicative."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "confirmed",
+      "action": "release_funds_received_notice",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "funds/conflict",
+    "family": "funds",
+    "variant": "conflict",
+    "visible": {
+      "question": "Does the notice establish that payment funds have been received?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "An announced payment date is not evidence of funding. Release the funds-received notice only on an explicit receipt confirmation; otherwise query funding status. No other funding evidence is available."
+        },
+        {
+          "id": "E1",
+          "text": "As of 12:00 UTC today, payment funds have NOT been received."
+        },
+        {
+          "id": "E2",
+          "text": "As of 12:00 UTC today, payment funds HAVE been received."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_funding",
+        "release_funds_received_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "default/original",
+    "family": "default",
+    "variant": "original",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Holders who do not make an election will receive cash."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_default",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "default/paraphrase",
+    "family": "default",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Cash is the default consideration for any holding without an election."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_default",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "default/typos",
+    "family": "default",
+    "variant": "typos",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Holders who do not make an electon will recieve cash."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "cash",
+      "action": "prepare_cash_default",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "default/meaning_change",
+    "family": "default",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Holders who do not make an election will receive shares."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "shares",
+      "action": "prepare_share_default",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "default/amendment",
+    "family": "default",
+    "variant": "amendment",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Holders who do not make an election will receive cash."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Holders who do not make an election will receive shares."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "shares",
+      "action": "prepare_share_default",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "default/conflict",
+    "family": "default",
+    "variant": "conflict",
+    "visible": {
+      "question": "Which option applies to the uninstructed balance?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Options: cash and shares. No customer election exists. Event terms authorise the announced default for the entire uninstructed balance. Prepare the default treatment for review, without executing it."
+        },
+        {
+          "id": "E1",
+          "text": "Holders who do not make an election will receive cash."
+        },
+        {
+          "id": "E2",
+          "text": "Holders who do not make an election will receive shares."
+        }
+      ],
+      "finding_labels": [
+        "cash",
+        "shares",
+        "unclear"
+      ],
+      "action_labels": [
+        "prepare_cash_default",
+        "prepare_share_default",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "scope/original",
+    "family": "scope",
+    "variant": "original",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction."
+        },
+        {
+          "id": "E1",
+          "text": "This notice and its election terms apply exclusively to Event ALPHA."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "alpha",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "scope/paraphrase",
+    "family": "scope",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction."
+        },
+        {
+          "id": "E1",
+          "text": "Only Event ALPHA is covered by the terms in this communication."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "alpha",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "scope/typos",
+    "family": "scope",
+    "variant": "typos",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction."
+        },
+        {
+          "id": "E1",
+          "text": "This notice and its electon terms apply exclusivly to Event ALPHA."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "alpha",
+      "action": "retain_existing",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "scope/meaning_change",
+    "family": "scope",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction."
+        },
+        {
+          "id": "E1",
+          "text": "This notice and its election terms apply exclusively to Event BETA."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "beta",
+      "action": "request_new_election",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "scope/amendment",
+    "family": "scope",
+    "variant": "amendment",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: This notice and its election terms apply exclusively to Event ALPHA."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. This notice and its election terms apply exclusively to Event BETA."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "beta",
+      "action": "request_new_election",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "scope/conflict",
+    "family": "scope",
+    "variant": "conflict",
+    "visible": {
+      "question": "Is the existing election in scope for this event?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "The account holds securities in two separate events. An authorised election exists for Event ALPHA only. If the notice applies to ALPHA, retain that election. If it applies to BETA, request a separate customer election and do not reuse the ALPHA instruction. Both current notices below claim the SAME notice reference CA-001; neither is designated as replacing the other."
+        },
+        {
+          "id": "E1",
+          "text": "Notice reference CA-001 relates exclusively to Event ALPHA and not to Event BETA."
+        },
+        {
+          "id": "E2",
+          "text": "Notice reference CA-001 relates exclusively to Event BETA and not to Event ALPHA."
+        }
+      ],
+      "finding_labels": [
+        "alpha",
+        "beta",
+        "unclear"
+      ],
+      "action_labels": [
+        "retain_existing",
+        "request_new_election",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "threshold/original",
+    "family": "threshold",
+    "variant": "original",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "Acceptance is expected to reach the minimum threshold before expiry."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_acceptance",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "threshold/paraphrase",
+    "family": "threshold",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "The minimum acceptance level is forecast to be attained by expiry; attainment is not confirmed."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_acceptance",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "threshold/typos",
+    "family": "threshold",
+    "variant": "typos",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "Acceptance is expectd to reach the minimum threshhold before expiry."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "not_confirmed",
+      "action": "query_acceptance",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "threshold/meaning_change",
+    "family": "threshold",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "Acceptance has reached the minimum threshold before expiry."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "confirmed",
+      "action": "release_threshold_notice",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "threshold/amendment",
+    "family": "threshold",
+    "variant": "amendment",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: Acceptance is expected to reach the minimum threshold before expiry."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. Acceptance has reached the minimum threshold before expiry."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "confirmed",
+      "action": "release_threshold_notice",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "threshold/conflict",
+    "family": "threshold",
+    "variant": "conflict",
+    "visible": {
+      "question": "Has the minimum acceptance threshold actually been satisfied?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+        },
+        {
+          "id": "E1",
+          "text": "As of 12:00 UTC today, actual acceptance is BELOW the minimum threshold; the threshold is not satisfied."
+        },
+        {
+          "id": "E2",
+          "text": "As of 12:00 UTC today, actual acceptance is AT OR ABOVE the minimum threshold; the threshold is satisfied."
+        }
+      ],
+      "finding_labels": [
+        "not_confirmed",
+        "confirmed",
+        "unclear"
+      ],
+      "action_labels": [
+        "query_acceptance",
+        "release_threshold_notice",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "tax/original",
+    "family": "tax",
+    "variant": "original",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "The tax-relief form is mandatory before instructions may be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_tax_form",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "tax/paraphrase",
+    "family": "tax",
+    "variant": "paraphrase",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "Submission requires prior delivery of the tax-relief form; the requirement has not been waived."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_tax_form",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "tax/typos",
+    "family": "tax",
+    "variant": "typos",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "The tax-relief form is mandatry before instrucions may be submitted."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "required",
+      "action": "request_tax_form",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "tax/meaning_change",
+    "family": "tax",
+    "variant": "meaning_change",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "The tax-relief form requirement is waived; instructions may be submitted without it."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "waived",
+      "action": "submit",
+      "required_evidence": [
+        "E1"
+      ]
+    }
+  },
+  {
+    "id": "tax/amendment",
+    "family": "tax",
+    "variant": "amendment",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "Original notice: The tax-relief form is mandatory before instructions may be submitted."
+        },
+        {
+          "id": "E2",
+          "text": "Later amendment: This replaces the preceding notice in full. The tax-relief form requirement is waived; instructions may be submitted without it."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "waived",
+      "action": "submit",
+      "required_evidence": [
+        "E2"
+      ]
+    }
+  },
+  {
+    "id": "tax/conflict",
+    "family": "tax",
+    "variant": "conflict",
+    "visible": {
+      "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+      "documents": [
+        {
+          "id": "C1",
+          "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+        },
+        {
+          "id": "E1",
+          "text": "The tax-relief form is mandatory before instructions may be submitted."
+        },
+        {
+          "id": "E2",
+          "text": "The tax-relief form requirement is waived; instructions may be submitted without it."
+        }
+      ],
+      "finding_labels": [
+        "required",
+        "waived",
+        "unclear"
+      ],
+      "action_labels": [
+        "request_tax_form",
+        "submit",
+        "clarify"
+      ]
+    },
+    "oracle": {
+      "finding": "unclear",
+      "action": "clarify",
+      "required_evidence": [
+        "E1",
+        "E2"
+      ]
+    }
+  }
+]

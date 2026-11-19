@@ -1,0 +1,531 @@
+{
+  "revision": "scope-v3-presentations",
+  "cases": {
+    "account": {
+      "source": "payment",
+      "target": "Account R42, event D8",
+      "question": "What is the credit status? Choose credited or unconfirmed.",
+      "records": [
+        {
+          "id": "N2",
+          "statement": "Dividend scheduled today, conditional on receipt of funds."
+        },
+        {
+          "id": "L7",
+          "statement": "Completed dividend credit posted to account R24 for event D8."
+        }
+      ],
+      "decision": "unconfirmed",
+      "evidence_sets": [
+        [
+          "N2",
+          "L7"
+        ],
+        [
+          "L7"
+        ]
+      ]
+    },
+    "event": {
+      "source": "payment",
+      "target": "Account V4, event C19",
+      "question": "What is the credit status? Choose credited or unconfirmed.",
+      "records": [
+        {
+          "id": "B2",
+          "statement": "Events C19 and C91 concern the same security and payment date."
+        },
+        {
+          "id": "K3",
+          "statement": "Completed dividend credit posted to account V4 for event C19."
+        }
+      ],
+      "decision": "credited",
+      "evidence_sets": [
+        [
+          "K3"
+        ]
+      ]
+    },
+    "instruction": {
+      "source": "election",
+      "target": "Instruction J51",
+      "question": "What is the instruction status? Choose sent_only or accepted.",
+      "records": [
+        {
+          "id": "M2",
+          "statement": "Instructions J51 and J15 were transmitted for the same account and event, each electing shares for 80 units."
+        },
+        {
+          "id": "T9",
+          "statement": "Custodian acceptance received for instruction J15 only."
+        }
+      ],
+      "decision": "sent_only",
+      "evidence_sets": [
+        [
+          "M2",
+          "T9"
+        ]
+      ]
+    },
+    "option": {
+      "source": "election",
+      "target": "Election for option 002 at 15:00 UTC on 19 November 2026",
+      "question": "What action is permitted? Choose transmit or hold.",
+      "records": [
+        {
+          "id": "F3",
+          "statement": "Both options originally closed at 16:00 UTC on 18 November 2026. Client authorization is present and all other eligibility checks passed."
+        },
+        {
+          "id": "P8",
+          "statement": "Authorized amendment for this event extends option 002 only to 16:00 UTC on 20 November 2026."
+        }
+      ],
+      "decision": "transmit",
+      "evidence_sets": [
+        [
+          "F3",
+          "P8"
+        ]
+      ]
+    },
+    "reversal": {
+      "source": "payment",
+      "target": "Posting W71 in account A6, after the final ledger entry",
+      "question": "What is its current state? Choose credited or reversed.",
+      "records": [
+        {
+          "id": "H4",
+          "statement": "Completed credits W71 and W17 posted to account A6 this morning."
+        },
+        {
+          "id": "D2",
+          "statement": "Final ledger entry: completed reversal posted for original posting W71 in account A6."
+        }
+      ],
+      "decision": "reversed",
+      "evidence_sets": [
+        [
+          "D2"
+        ],
+        [
+          "H4",
+          "D2"
+        ]
+      ]
+    },
+    "fraction": {
+      "source": "fraction",
+      "target": "Fractional sale for account G8 under event S1",
+      "question": "What is the sale status? Choose sold or scheduled.",
+      "records": [
+        {
+          "id": "S6",
+          "statement": "Account G8 holds 125 old shares under event S1, receiving one new share per ten. Its half-share entitlement is scheduled for sale."
+        },
+        {
+          "id": "X4",
+          "statement": "Executed sale of a half-share entitlement for account G3 under event S1. This is the only completed sale report."
+        }
+      ],
+      "decision": "scheduled",
+      "evidence_sets": [
+        [
+          "S6",
+          "X4"
+        ]
+      ]
+    }
+  },
+  "sources": {
+    "fraction": "https://www.erstebank.rs/content/dam/rs/ebs/www_erstebank_rs/Treasury/Dokumentacija/Kastodi/MT564_StandardRelease.pdf#page=9",
+    "payment": "https://www.clearstream.com/resource/blob/3284510/602acc72a8a8ec33788a1a03ecbc3d6e/c22039-future-processing-data.pdf",
+    "election": "https://webapp.sebgroup.com/mb/mblib.nsf/a-w/c97040f2db1f37b9c12580f00038b1ca/%24file/investor_world_corporate_actions_response_management_guide.pdf#page=16"
+  },
+  "system": "The supplied records are complete and authoritative for this simulation.\nInline statements, labelled blocks and JSON entries are equally valid records.\nNo attachments, external lookup or additional verification are required.\nA status of posted means a completed ledger entry. A posted reversal undoes only\nthe posting ID it references. An acceptance or sale applies only to the referenced\ninstruction or account. A later amendment changes only its specified option.\nUse these definitions and only the records for the target.\nReturn one raw JSON object with exactly these fields:\ndecision: one of the decision labels in the question.\nevidence: a nonempty JSON array of unique record IDs supporting the decision.\nInclude all records needed to establish the current state and exclude irrelevant records.\nNo Markdown fences, additional keys, explanations or surrounding prose.",
+  "models": [
+    "claude-sonnet-5-5"
+  ],
+  "repeats": 3,
+  "jobs": [
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "json",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "json",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "json",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "json",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "blocks",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "event",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "inline",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "json",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "json",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "json",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "inline",
+      "repeat": 0
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "fraction",
+      "presentation": "blocks",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "reversal",
+      "presentation": "inline",
+      "repeat": 2
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "instruction",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "account",
+      "presentation": "blocks",
+      "repeat": 1
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "case": "option",
+      "presentation": "json",
+      "repeat": 2
+    }
+  ],
+  "source_sha256": "3f56fe90d7db8ef582d06a9f43c3b198e25662fbcd6696c3b76461464172c1be",
+  "max_tokens": 2048,
+  "request_settings": {
+    "claude-haiku-5-5": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "output_config": {
+        "effort": "medium"
+      }
+    },
+    "claude-sonnet-5-5": {
+      "thinking": {
+        "type": "between_tools"
+      },
+      "output_config": {
+        "effort": "medium"
+      }
+    }
+  },
+  "prompts": {
+    "account": {
+      "inline": "Target: Account R42, event D8\nN2: Dividend scheduled today, conditional on receipt of funds. L7: Completed dividend credit posted to account R24 for event D8.\nWhat is the credit status? Choose credited or unconfirmed.",
+      "blocks": "Target: Account R42, event D8\nComplete supplied records\nRecord N2\nDividend scheduled today, conditional on receipt of funds.\n\nRecord L7\nCompleted dividend credit posted to account R24 for event D8.\nWhat is the credit status? Choose credited or unconfirmed.",
+      "json": "Target: Account R42, event D8\n{\n  \"records\": [\n    {\n      \"id\": \"N2\",\n      \"statement\": \"Dividend scheduled today, conditional on receipt of funds.\"\n    },\n    {\n      \"id\": \"L7\",\n      \"statement\": \"Completed dividend credit posted to account R24 for event D8.\"\n    }\n  ]\n}\nWhat is the credit status? Choose credited or unconfirmed."
+    },
+    "event": {
+      "inline": "Target: Account V4, event C19\nB2: Events C19 and C91 concern the same security and payment date. K3: Completed dividend credit posted to account V4 for event C19.\nWhat is the credit status? Choose credited or unconfirmed.",
+      "blocks": "Target: Account V4, event C19\nComplete supplied records\nRecord B2\nEvents C19 and C91 concern the same security and payment date.\n\nRecord K3\nCompleted dividend credit posted to account V4 for event C19.\nWhat is the credit status? Choose credited or unconfirmed.",
+      "json": "Target: Account V4, event C19\n{\n  \"records\": [\n    {\n      \"id\": \"B2\",\n      \"statement\": \"Events C19 and C91 concern the same security and payment date.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"statement\": \"Completed dividend credit posted to account V4 for event C19.\"\n    }\n  ]\n}\nWhat is the credit status? Choose credited or unconfirmed."
+    },
+    "instruction": {
+      "inline": "Target: Instruction J51\nM2: Instructions J51 and J15 were transmitted for the same account and event, each electing shares for 80 units. T9: Custodian acceptance received for instruction J15 only.\nWhat is the instruction status? Choose sent_only or accepted.",
+      "blocks": "Target: Instruction J51\nComplete supplied records\nRecord M2\nInstructions J51 and J15 were transmitted for the same account and event, each electing shares for 80 units.\n\nRecord T9\nCustodian acceptance received for instruction J15 only.\nWhat is the instruction status? Choose sent_only or accepted.",
+      "json": "Target: Instruction J51\n{\n  \"records\": [\n    {\n      \"id\": \"M2\",\n      \"statement\": \"Instructions J51 and J15 were transmitted for the same account and event, each electing shares for 80 units.\"\n    },\n    {\n      \"id\": \"T9\",\n      \"statement\": \"Custodian acceptance received for instruction J15 only.\"\n    }\n  ]\n}\nWhat is the instruction status? Choose sent_only or accepted."
+    },
+    "option": {
+      "inline": "Target: Election for option 002 at 15:00 UTC on 19 November 2026\nF3: Both options originally closed at 16:00 UTC on 18 November 2026. Client authorization is present and all other eligibility checks passed. P8: Authorized amendment for this event extends option 002 only to 16:00 UTC on 20 November 2026.\nWhat action is permitted? Choose transmit or hold.",
+      "blocks": "Target: Election for option 002 at 15:00 UTC on 19 November 2026\nComplete supplied records\nRecord F3\nBoth options originally closed at 16:00 UTC on 18 November 2026. Client authorization is present and all other eligibility checks passed.\n\nRecord P8\nAuthorized amendment for this event extends option 002 only to 16:00 UTC on 20 November 2026.\nWhat action is permitted? Choose transmit or hold.",
+      "json": "Target: Election for option 002 at 15:00 UTC on 19 November 2026\n{\n  \"records\": [\n    {\n      \"id\": \"F3\",\n      \"statement\": \"Both options originally closed at 16:00 UTC on 18 November 2026. Client authorization is present and all other eligibility checks passed.\"\n    },\n    {\n      \"id\": \"P8\",\n      \"statement\": \"Authorized amendment for this event extends option 002 only to 16:00 UTC on 20 November 2026.\"\n    }\n  ]\n}\nWhat action is permitted? Choose transmit or hold."
+    },
+    "reversal": {
+      "inline": "Target: Posting W71 in account A6, after the final ledger entry\nH4: Completed credits W71 and W17 posted to account A6 this morning. D2: Final ledger entry: completed reversal posted for original posting W71 in account A6.\nWhat is its current state? Choose credited or reversed.",
+      "blocks": "Target: Posting W71 in account A6, after the final ledger entry\nComplete supplied records\nRecord H4\nCompleted credits W71 and W17 posted to account A6 this morning.\n\nRecord D2\nFinal ledger entry: completed reversal posted for original posting W71 in account A6.\nWhat is its current state? Choose credited or reversed.",
+      "json": "Target: Posting W71 in account A6, after the final ledger entry\n{\n  \"records\": [\n    {\n      \"id\": \"H4\",\n      \"statement\": \"Completed credits W71 and W17 posted to account A6 this morning.\"\n    },\n    {\n      \"id\": \"D2\",\n      \"statement\": \"Final ledger entry: completed reversal posted for original posting W71 in account A6.\"\n    }\n  ]\n}\nWhat is its current state? Choose credited or reversed."
+    },
+    "fraction": {
+      "inline": "Target: Fractional sale for account G8 under event S1\nS6: Account G8 holds 125 old shares under event S1, receiving one new share per ten. Its half-share entitlement is scheduled for sale. X4: Executed sale of a half-share entitlement for account G3 under event S1. This is the only completed sale report.\nWhat is the sale status? Choose sold or scheduled.",
+      "blocks": "Target: Fractional sale for account G8 under event S1\nComplete supplied records\nRecord S6\nAccount G8 holds 125 old shares under event S1, receiving one new share per ten. Its half-share entitlement is scheduled for sale.\n\nRecord X4\nExecuted sale of a half-share entitlement for account G3 under event S1. This is the only completed sale report.\nWhat is the sale status? Choose sold or scheduled.",
+      "json": "Target: Fractional sale for account G8 under event S1\n{\n  \"records\": [\n    {\n      \"id\": \"S6\",\n      \"statement\": \"Account G8 holds 125 old shares under event S1, receiving one new share per ten. Its half-share entitlement is scheduled for sale.\"\n    },\n    {\n      \"id\": \"X4\",\n      \"statement\": \"Executed sale of a half-share entitlement for account G3 under event S1. This is the only completed sale report.\"\n    }\n  ]\n}\nWhat is the sale status? Choose sold or scheduled."
+    }
+  },
+  "scoring": "Exact raw schema for format. Raw JSON or single enclosing fence for content. Decision and supporting ID-set matches scored independently. Extra fields fail format. Prose or multiple objects are unscorable."
+}

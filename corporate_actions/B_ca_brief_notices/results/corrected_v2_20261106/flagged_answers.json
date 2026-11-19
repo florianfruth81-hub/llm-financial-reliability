@@ -1,0 +1,1106 @@
+[
+  {
+    "key": "claude-haiku-5-5/deadline/paraphrase/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "deadline/paraphrase",
+      "family": "deadline",
+      "variant": "paraphrase",
+      "visible": {
+        "question": "Is the custodian instruction deadline still open at the stated current time?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+          },
+          {
+            "id": "E1",
+            "text": "Issuer cut-off: 16:00 UTC today. Instructions must reach this custodian before 14:00 UTC today."
+          }
+        ],
+        "finding_labels": [
+          "open",
+          "closed",
+          "unclear"
+        ],
+        "action_labels": [
+          "submit",
+          "request_late_exception",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "open",
+        "action": "submit",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the custodian instruction deadline still open at the stated current time?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting.\"},{\"id\":\"E1\",\"text\":\"Issuer cut-off: 16:00 UTC today. Instructions must reach this custodian before 14:00 UTC today.\"}],\"finding_labels\":[\"open\",\"closed\",\"unclear\"],\"action_labels\":[\"submit\",\"request_late_exception\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"open\",\"action\":\"submit\",\"evidence\":[\"C1\",\"E1\"],\"reason\":\"Now 12:00 UTC; custodian deadline 14:00 UTC today is still open; authorised election ready.\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 633,
+      "output_tokens": 72,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/waiver/meaning_change/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "waiver/meaning_change",
+      "family": "waiver",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Has the minimum-acceptance condition actually been waived?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+          },
+          {
+            "id": "E1",
+            "text": "The offeror has waived the minimum-acceptance condition."
+          }
+        ],
+        "finding_labels": [
+          "not_waived",
+          "waived",
+          "unclear"
+        ],
+        "action_labels": [
+          "withhold_completion_notice",
+          "release_completion_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "waived",
+        "action": "release_completion_notice",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum-acceptance condition actually been waived?\",\"documents\":[{\"id\":\"C1\",\"text\":\"The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient.\"},{\"id\":\"E1\",\"text\":\"The offeror has waived the minimum-acceptance condition.\"}],\"finding_labels\":[\"not_waived\",\"waived\",\"unclear\"],\"action_labels\":[\"withhold_completion_notice\",\"release_completion_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"waived\",\"action\":\"release_completion_notice\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 states the condition was waived; C1 permits release once actually waived.\",\"}\"]}\n\nNote: the JSON above is malformed (stray trailing bracket). Corrected output:\n\n{\"finding\":\"waived\",\"action\":\"release_completion_notice\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 states the condition was waived; C1 permits release once actually waived.\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 588,
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/tax/typos/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "tax/typos",
+      "family": "tax",
+      "variant": "typos",
+      "visible": {
+        "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+          },
+          {
+            "id": "E1",
+            "text": "The tax-relief form is mandatry before instrucions may be submitted."
+          }
+        ],
+        "finding_labels": [
+          "required",
+          "waived",
+          "unclear"
+        ],
+        "action_labels": [
+          "request_tax_form",
+          "submit",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "required",
+        "action": "request_tax_form",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the tax-relief documentation requirement satisfied for this processing step?\",\"documents\":[{\"id\":\"C1\",\"text\":\"No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice.\"},{\"id\":\"E1\",\"text\":\"The tax-relief form is mandatry before instrucions may be submitted.\"}],\"finding_labels\":[\"required\",\"waived\",\"unclear\"],\"action_labels\":[\"request_tax_form\",\"submit\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"required\",\"action\":\"request_tax_form\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 says form is mandatory (typo 'mandatry'); C1 requires form when mandatory; none held\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 596,
+      "output_tokens": 74,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/deadline/amendment/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "deadline/amendment",
+      "family": "deadline",
+      "variant": "amendment",
+      "visible": {
+        "question": "Is the custodian instruction deadline still open at the stated current time?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+          },
+          {
+            "id": "E1",
+            "text": "Original notice: The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today."
+          },
+          {
+            "id": "E2",
+            "text": "Later amendment: This replaces the preceding notice in full. The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 11:00 UTC today."
+          }
+        ],
+        "finding_labels": [
+          "open",
+          "closed",
+          "unclear"
+        ],
+        "action_labels": [
+          "submit",
+          "request_late_exception",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "closed",
+        "action": "request_late_exception",
+        "required_evidence": [
+          "E2"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the custodian instruction deadline still open at the stated current time?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting.\"},{\"id\":\"E1\",\"text\":\"Original notice: The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today.\"},{\"id\":\"E2\",\"text\":\"Later amendment: This replaces the preceding notice in full. The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 11:00 UTC today.\"}],\"finding_labels\":[\"open\",\"closed\",\"unclear\"],\"action_labels\":[\"submit\",\"request_late_exception\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"closed\",\"action\":\"request_late_exception\",\"evidence\":[\"C1\",\"E2\"],\"reason\":\"E2 explicitly replaces E1; custodian deadline 11:00 UTC has passed at 12:00 UTC\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 706,
+      "output_tokens": 79,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/threshold/meaning_change/1",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "threshold/meaning_change",
+      "family": "threshold",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Has the minimum acceptance threshold actually been satisfied?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+          },
+          {
+            "id": "E1",
+            "text": "Acceptance has reached the minimum threshold before expiry."
+          }
+        ],
+        "finding_labels": [
+          "not_confirmed",
+          "confirmed",
+          "unclear"
+        ],
+        "action_labels": [
+          "query_acceptance",
+          "release_threshold_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "confirmed",
+        "action": "release_threshold_notice",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 1,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum acceptance threshold actually been satisfied?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed.\"},{\"id\":\"E1\",\"text\":\"Acceptance has reached the minimum threshold before expiry.\"}],\"finding_labels\":[\"not_confirmed\",\"confirmed\",\"unclear\"],\"action_labels\":[\"query_acceptance\",\"release_threshold_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E1\"],\"reason\":\"E1 states acceptance has reached the minimum threshold; C1 requires actual attainment, which E1 states.\",\"}\":\"\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 596,
+      "output_tokens": 80,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/revocation/meaning_change/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "revocation/meaning_change",
+      "family": "revocation",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Can the existing election be withdrawn now?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+          },
+          {
+            "id": "E1",
+            "text": "Elections are not revocable during the withdrawal window."
+          }
+        ],
+        "finding_labels": [
+          "permitted",
+          "prohibited",
+          "unclear"
+        ],
+        "action_labels": [
+          "withdraw",
+          "retain_and_notify",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "prohibited",
+        "action": "retain_and_notify",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Can the existing election be withdrawn now?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer.\"},{\"id\":\"E1\",\"text\":\"Elections are not revocable during the withdrawal window.\"}],\"finding_labels\":[\"permitted\",\"prohibited\",\"unclear\"],\"action_labels\":[\"withdraw\",\"retain_and_notify\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"unclear\",\"action\":\"clarify\",\"evidence\":[\"C1\",\"E1\"],\"reason\":\"C1 says withdraw only if terms permit; E1 says not revocable during window, which is open per C1. Conflict unresolved.\"}",
+    "parsed": {
+      "finding": "unclear",
+      "action": "clarify",
+      "evidence": [
+        "C1",
+        "E1"
+      ],
+      "reason": "C1 says withdraw only if terms permit; E1 says not revocable during window, which is open per C1. Conflict unresolved."
+    },
+    "score": {
+      "invalid": 0,
+      "interpretation_error": 1,
+      "action_error": 1,
+      "evidence_missing": 0,
+      "unnecessary_clarification": 1,
+      "missed_conflict": 0
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 590,
+      "output_tokens": 79,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": false
+  },
+  {
+    "key": "claude-haiku-5-5/tax/meaning_change/1",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "tax/meaning_change",
+      "family": "tax",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+          },
+          {
+            "id": "E1",
+            "text": "The tax-relief form requirement is waived; instructions may be submitted without it."
+          }
+        ],
+        "finding_labels": [
+          "required",
+          "waived",
+          "unclear"
+        ],
+        "action_labels": [
+          "request_tax_form",
+          "submit",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "waived",
+        "action": "submit",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 1,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the tax-relief documentation requirement satisfied for this processing step?\",\"documents\":[{\"id\":\"C1\",\"text\":\"No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice.\"},{\"id\":\"E1\",\"text\":\"The tax-relief form requirement is waived; instructions may be submitted without it.\"}],\"finding_labels\":[\"required\",\"waived\",\"unclear\"],\"action_labels\":[\"request_tax_form\",\"submit\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"waived\",\"action\":\"submit\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 states the tax-relief form requirement is waived; C1 says submit if waived.\",\"}\":\"\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 598,
+      "output_tokens": 67,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/threshold/meaning_change/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "threshold/meaning_change",
+      "family": "threshold",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Has the minimum acceptance threshold actually been satisfied?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+          },
+          {
+            "id": "E1",
+            "text": "Acceptance has reached the minimum threshold before expiry."
+          }
+        ],
+        "finding_labels": [
+          "not_confirmed",
+          "confirmed",
+          "unclear"
+        ],
+        "action_labels": [
+          "query_acceptance",
+          "release_threshold_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "confirmed",
+        "action": "release_threshold_notice",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum acceptance threshold actually been satisfied?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed.\"},{\"id\":\"E1\",\"text\":\"Acceptance has reached the minimum threshold before expiry.\"}],\"finding_labels\":[\"not_confirmed\",\"confirmed\",\"unclear\"],\"action_labels\":[\"query_acceptance\",\"release_threshold_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E1\"],\"reason\":\"E1 states acceptance has reached the minimum threshold; C1 requires actual attainment, which E1 states.\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 596,
+      "output_tokens": 77,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/deadline/original/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "deadline/original",
+      "family": "deadline",
+      "variant": "original",
+      "visible": {
+        "question": "Is the custodian instruction deadline still open at the stated current time?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting."
+          },
+          {
+            "id": "E1",
+            "text": "The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today."
+          }
+        ],
+        "finding_labels": [
+          "open",
+          "closed",
+          "unclear"
+        ],
+        "action_labels": [
+          "submit",
+          "request_late_exception",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "open",
+        "action": "submit",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the custodian instruction deadline still open at the stated current time?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Now is 10 November 2026, 12:00 UTC. A valid authorised election is ready. All deadlines below are custodian deadlines in UTC on 10 November 2026. Submit before the deadline only; after it, seek an exception without submitting.\"},{\"id\":\"E1\",\"text\":\"The issuer deadline is 16:00 UTC. Our custodian instruction deadline is 14:00 UTC today.\"}],\"finding_labels\":[\"open\",\"closed\",\"unclear\"],\"action_labels\":[\"submit\",\"request_late_exception\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"open\",\"action\":\"submit\",\"evidence\":[\"C1\",\"E1\"],\"reason\":\"Now 12:00 UTC is before the 14:00 UTC custodian deadline; valid election ready.\",\"}\n\nNote: the JSON above is malformed in its last line; corrected output follows.\n\n{\"finding\":\"open\",\"action\":\"submit\",\"evidence\":[\"C1\",\"E1\"],\"reason\":\"Now 12:00 UTC is before the 14:00 UTC custodian deadline; valid election ready.\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 631,
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/revocation/amendment/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "revocation/amendment",
+      "family": "revocation",
+      "variant": "amendment",
+      "visible": {
+        "question": "Can the existing election be withdrawn now?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer."
+          },
+          {
+            "id": "E1",
+            "text": "Original notice: Elections are revocable during the withdrawal window."
+          },
+          {
+            "id": "E2",
+            "text": "Later amendment: This replaces the preceding notice in full. Elections are not revocable during the withdrawal window."
+          }
+        ],
+        "finding_labels": [
+          "permitted",
+          "prohibited",
+          "unclear"
+        ],
+        "action_labels": [
+          "withdraw",
+          "retain_and_notify",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "prohibited",
+        "action": "retain_and_notify",
+        "required_evidence": [
+          "E2"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Can the existing election be withdrawn now?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer has authorised withdrawal of an accepted election. Any applicable withdrawal window is open. Withdraw only when event terms permit it; otherwise retain the election and notify the customer.\"},{\"id\":\"E1\",\"text\":\"Original notice: Elections are revocable during the withdrawal window.\"},{\"id\":\"E2\",\"text\":\"Later amendment: This replaces the preceding notice in full. Elections are not revocable during the withdrawal window.\"}],\"finding_labels\":[\"permitted\",\"prohibited\",\"unclear\"],\"action_labels\":[\"withdraw\",\"retain_and_notify\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"prohibited\",\"action\":\"retain_and_notify\",\"evidence\":[\"E2\",\"C1\"],\"reason\":\"E2 explicitly replaces E1: elections not revocable in window; retain and notify.\",\"}\"\n\nWait — I must output exactly one valid JSON object with no trailing text. Corrected:\n\n{\"finding\":\"prohibited\",\"action\":\"retain_and_notify\",\"evidence\":[\"E2\",\"C1\"],\"reason\":\"E2 explicitly replaces E1: elections not revocable in window; retain and notify.\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 642,
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/tax/typos/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "tax/typos",
+      "family": "tax",
+      "variant": "typos",
+      "visible": {
+        "question": "Is the tax-relief documentation requirement satisfied for this processing step?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice."
+          },
+          {
+            "id": "E1",
+            "text": "The tax-relief form is mandatry before instrucions may be submitted."
+          }
+        ],
+        "finding_labels": [
+          "required",
+          "waived",
+          "unclear"
+        ],
+        "action_labels": [
+          "request_tax_form",
+          "submit",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "required",
+        "action": "request_tax_form",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Is the tax-relief documentation requirement satisfied for this processing step?\",\"documents\":[{\"id\":\"C1\",\"text\":\"No tax form is held. The customer has authorised the election. The synthetic processing policy requires the form when the event notice says it is mandatory; if waived, submit. This is not real tax advice.\"},{\"id\":\"E1\",\"text\":\"The tax-relief form is mandatry before instrucions may be submitted.\"}],\"finding_labels\":[\"required\",\"waived\",\"unclear\"],\"action_labels\":[\"request_tax_form\",\"submit\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"required\",\"action\":\"request_tax_form\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 states form is mandatory (typo 'mandatry') before submission; no waiver; C1 requires form then.\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 596,
+      "output_tokens": 76,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/threshold/meaning_change/0",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "threshold/meaning_change",
+      "family": "threshold",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Has the minimum acceptance threshold actually been satisfied?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+          },
+          {
+            "id": "E1",
+            "text": "Acceptance has reached the minimum threshold before expiry."
+          }
+        ],
+        "finding_labels": [
+          "not_confirmed",
+          "confirmed",
+          "unclear"
+        ],
+        "action_labels": [
+          "query_acceptance",
+          "release_threshold_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "confirmed",
+        "action": "release_threshold_notice",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 0,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum acceptance threshold actually been satisfied?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed.\"},{\"id\":\"E1\",\"text\":\"Acceptance has reached the minimum threshold before expiry.\"}],\"finding_labels\":[\"not_confirmed\",\"confirmed\",\"unclear\"],\"action_labels\":[\"query_acceptance\",\"release_threshold_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E1\"],\"reason\":\"E1 states acceptance has reached the minimum threshold before expiry; C1 requires actual attainment, which E1 states.\",\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 596,
+      "output_tokens": 81,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/threshold/amendment/1",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "threshold/amendment",
+      "family": "threshold",
+      "variant": "amendment",
+      "visible": {
+        "question": "Has the minimum acceptance threshold actually been satisfied?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+          },
+          {
+            "id": "E1",
+            "text": "Original notice: Acceptance is expected to reach the minimum threshold before expiry."
+          },
+          {
+            "id": "E2",
+            "text": "Later amendment: This replaces the preceding notice in full. Acceptance has reached the minimum threshold before expiry."
+          }
+        ],
+        "finding_labels": [
+          "not_confirmed",
+          "confirmed",
+          "unclear"
+        ],
+        "action_labels": [
+          "query_acceptance",
+          "release_threshold_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "confirmed",
+        "action": "release_threshold_notice",
+        "required_evidence": [
+          "E2"
+        ]
+      }
+    },
+    "repeat": 1,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum acceptance threshold actually been satisfied?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed.\"},{\"id\":\"E1\",\"text\":\"Original notice: Acceptance is expected to reach the minimum threshold before expiry.\"},{\"id\":\"E2\",\"text\":\"Later amendment: This replaces the preceding notice in full. Acceptance has reached the minimum threshold before expiry.\"}],\"finding_labels\":[\"not_confirmed\",\"confirmed\",\"unclear\"],\"action_labels\":[\"query_acceptance\",\"release_threshold_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E2\",\"C1\"],\"reason\":\"E2 explicitly replaces E1 and states threshold actually reached; C1 accepts actual attainment.\",\"}\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 655,
+      "output_tokens": 81,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/threshold/amendment/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "threshold/amendment",
+      "family": "threshold",
+      "variant": "amendment",
+      "visible": {
+        "question": "Has the minimum acceptance threshold actually been satisfied?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed."
+          },
+          {
+            "id": "E1",
+            "text": "Original notice: Acceptance is expected to reach the minimum threshold before expiry."
+          },
+          {
+            "id": "E2",
+            "text": "Later amendment: This replaces the preceding notice in full. Acceptance has reached the minimum threshold before expiry."
+          }
+        ],
+        "finding_labels": [
+          "not_confirmed",
+          "confirmed",
+          "unclear"
+        ],
+        "action_labels": [
+          "query_acceptance",
+          "release_threshold_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "confirmed",
+        "action": "release_threshold_notice",
+        "required_evidence": [
+          "E2"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum acceptance threshold actually been satisfied?\",\"documents\":[{\"id\":\"C1\",\"text\":\"Customer notification that the threshold is met requires a statement of actual attainment. An expected or forecast level is insufficient; query status when attainment is unconfirmed.\"},{\"id\":\"E1\",\"text\":\"Original notice: Acceptance is expected to reach the minimum threshold before expiry.\"},{\"id\":\"E2\",\"text\":\"Later amendment: This replaces the preceding notice in full. Acceptance has reached the minimum threshold before expiry.\"}],\"finding_labels\":[\"not_confirmed\",\"confirmed\",\"unclear\"],\"action_labels\":[\"query_acceptance\",\"release_threshold_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E2\",\"C1\"],\"reason\":\"E2 explicitly replaces E1 and states threshold actually reached; C1 accepts actual attainment.\",\"}\n\nWait — the output above is malformed JSON. Corrected:\n\n{\"finding\":\"confirmed\",\"action\":\"release_threshold_notice\",\"evidence\":[\"E2\",\"C1\"],\"reason\":\"E2 explicitly replaces E1 and states threshold actually reached; C1 accepts actual attainment.\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 655,
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  },
+  {
+    "key": "claude-haiku-5-5/waiver/meaning_change/2",
+    "model": "claude-haiku-5-5",
+    "case": {
+      "id": "waiver/meaning_change",
+      "family": "waiver",
+      "variant": "meaning_change",
+      "visible": {
+        "question": "Has the minimum-acceptance condition actually been waived?",
+        "documents": [
+          {
+            "id": "C1",
+            "text": "The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient."
+          },
+          {
+            "id": "E1",
+            "text": "The offeror has waived the minimum-acceptance condition."
+          }
+        ],
+        "finding_labels": [
+          "not_waived",
+          "waived",
+          "unclear"
+        ],
+        "action_labels": [
+          "withhold_completion_notice",
+          "release_completion_notice",
+          "clarify"
+        ]
+      },
+      "oracle": {
+        "finding": "waived",
+        "action": "release_completion_notice",
+        "required_evidence": [
+          "E1"
+        ]
+      }
+    },
+    "repeat": 2,
+    "prompt": "You interpret synthetic corporate-action narratives and propose actions.\nFollow the supplied operating policy and account context. These are fictional\nrules, not real legal or market advice. Do not invent evidence or authorisation.\nUse only the provided documents. E1 and E2 are equally authoritative current\nnotices unless an explicit replacement is stated. C1 supplies authoritative\naccount context and operating rules. A later explicit replacement supersedes the\nearlier notice. Equally authoritative conflicting current notices with no\nsupersession relationship are unresolved: finding=unclear, action=clarify.\nPossibility, prediction or intention does not establish an event has occurred.\nIf ordinary typos leave meaning clear, interpret the meaning; do not abstain\nmerely because of spelling. If terms are established, take the policy-prescribed\nproposed action rather than unnecessarily escalating. No actions execute here.\nReturn exactly one JSON object with these fields:\n{\"finding\":\"one of supplied finding_labels\",\"action\":\"one of supplied action_labels\",\n\"evidence\":[\"document IDs\"],\"reason\":\"short explanation, ideally under 120 characters\"}.\nCite document(s) needed to justify the interpretation. No prose outside JSON.\n\nINPUT={\"question\":\"Has the minimum-acceptance condition actually been waived?\",\"documents\":[{\"id\":\"C1\",\"text\":\"The acceptance threshold has not been reached. Release a completion notification only after the condition has actually been waived. A possibility or intention to waive is insufficient.\"},{\"id\":\"E1\",\"text\":\"The offeror has waived the minimum-acceptance condition.\"}],\"finding_labels\":[\"not_waived\",\"waived\",\"unclear\"],\"action_labels\":[\"withhold_completion_notice\",\"release_completion_notice\",\"clarify\"]}",
+    "type": "result",
+    "raw": "{\"finding\":\"waived\",\"action\":\"release_completion_notice\",\"evidence\":[\"E1\",\"C1\"],\"reason\":\"E1 states the minimum-acceptance condition was waived; C1 permits release once actually waived.\",\"}\"}",
+    "parsed": null,
+    "score": {
+      "invalid": 1,
+      "interpretation_error": null,
+      "action_error": null,
+      "evidence_missing": null,
+      "unnecessary_clarification": null,
+      "missed_conflict": null
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 588,
+      "output_tokens": 74,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": null,
+      "service_tier": "standard",
+      "speed": "standard"
+    },
+    "stop_reason": "end_turn",
+    "actual_model": "claude-haiku-5-5",
+    "format_violation": true
+  }
+]

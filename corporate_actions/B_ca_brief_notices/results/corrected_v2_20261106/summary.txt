@@ -1,0 +1,24 @@
+SYNTHETIC CORPORATE-ACTION STUDY — exploratory, not a production error rate.
+12 families; 6 matched versions; repeated generations reuse cases. No transactions executed.
+Interpretation, proposed action and evidence citation are scored separately.
+Action mismatch does NOT automatically mean an unsafe action. Citation presence does NOT prove entailment.
+
+model / version                             answers  valid  interp  action   evid clarify+ conflict-
+claude-haiku-5-5 / amendment                     36     32       0       0       0       0       0
+claude-haiku-5-5 / conflict                      36     36       0       0       0       0       0
+claude-haiku-5-5 / meaning_change                36     30       1       1       0       1       0
+claude-haiku-5-5 / original                      36     35       0       0       0       0       0
+claude-haiku-5-5 / paraphrase                    36     35       0       0       0       0       0
+claude-haiku-5-5 / typos                         36     34       0       0       0       0       0
+claude-sonnet-5-5 / amendment                    36     36       0       0       0       0       0
+claude-sonnet-5-5 / conflict                     36     36       0       0       0       0       0
+claude-sonnet-5-5 / meaning_change               36     36       0       0       0       0       0
+claude-sonnet-5-5 / original                     36     36       0       0       0       0       0
+claude-sonnet-5-5 / paraphrase                   36     36       0       0       0       0       0
+claude-sonnet-5-5 / typos                        36     36       0       0       0       0       0
+
+Collected 432/432; invalid=14.
+Logged usage cost: $0.4572. Uncertain-call reservation retained: $0.0000.
+Format deviations: 31.
+COLLECTION COMPLETE; invalid responses remain reported, never scored as correct.
+Labels and cases are AI-assisted and require human domain review before research submission.

@@ -1,0 +1,1364 @@
+{
+  "config": {
+    "models": [
+      {
+        "id": "claude-haiku-5-5",
+        "input_usd_per_million": 0.1,
+        "output_usd_per_million": 0.5,
+        "settings": {
+          "thinking": {
+            "type": "disabled"
+          }
+        },
+        "max_priced_input_tokens": 100000
+      },
+      {
+        "id": "claude-sonnet-5-5",
+        "input_usd_per_million": 2.0,
+        "output_usd_per_million": 10.0,
+        "settings": {
+          "thinking": {
+            "type": "between_tools"
+          }
+        }
+      }
+    ],
+    "settings": {
+      "output_config": {
+        "effort": "medium"
+      }
+    },
+    "repeats": 3,
+    "seed": 42,
+    "max_output": 1024,
+    "max_usd": 2.0,
+    "request_interval_seconds": 1.5,
+    "public_docs_verified_on": "2026-11-10",
+    "public_docs_sources": [
+      "https://platform.claude.com/docs/en/about-claude/pricing",
+      "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+      "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "https://platform.claude.com/docs/en/build-with-claude/thinking-troubleshooting"
+    ],
+    "configuration_scope": "Both no upfront thinking, medium effort; model-specific supported API modes, not identical modes or maximum capability. Global uncached first-party pricing."
+  },
+  "manifest": {
+    "protocol": "ca-history-development-v3",
+    "scorer": "ca-history-score-v3",
+    "created": "2026-11-09T23:17:56.677471+00:00",
+    "source_sha256": "f3b70bbeac5197feebd4d82b8adc3df53c803a918480424561bc9e8db0f0d037",
+    "cases_sha256": "09740b75824b246b728824356ef16e327e07d1144c85248e07c99241429180d3",
+    "policy_sha256": "e1a56c14daf243dc28031a85ea875c06ff00bd919a7ad224e452b66db2630b3a",
+    "design": "12 development templates x 3 history lengths x models x repeats; no independent holdout",
+    "limitations": "Author-labelled synthetic cases; references not independently validated."
+  },
+  "review": {
+    "cases_sha256": "09740b75824b246b728824356ef16e327e07d1144c85248e07c99241429180d3",
+    "approved": false,
+    "reviewer": "",
+    "independently_reviewed": false,
+    "notes": ""
+  },
+  "jobs": [
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history0/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/preserved_instruction/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/issuer_only_extension/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/issuer_only_extension/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "issuer_only_extension/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/other_event_distractor/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/partial_instruction/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "partial_instruction/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_accepted/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_accepted/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history0/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/same_event_conflict/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/other_event_distractor/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "other_event_distractor/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/timeout_not_found/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "timeout_not_found/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history15/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_not_found/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_not_found/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_permitted/history5/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history5/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/custodian_extension/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "custodian_extension/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-sonnet-5-5/timeout_accepted/history15/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "timeout_accepted/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history5/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/revocation_prohibited/history5/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "revocation_prohibited/history5",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/same_event_conflict/history5/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "same_event_conflict/history5",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/possible_waiver/history0/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "possible_waiver/history0",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_permitted/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_permitted/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-sonnet-5-5/preserved_instruction/history15/repeat2",
+      "model": "claude-sonnet-5-5",
+      "case_id": "preserved_instruction/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history5/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history5",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/actual_waiver/history15/repeat2",
+      "model": "claude-haiku-5-5",
+      "case_id": "actual_waiver/history15",
+      "repeat": 2
+    },
+    {
+      "job_id": "claude-haiku-5-5/possible_waiver/history15/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "possible_waiver/history15",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/partial_instruction/history0/repeat0",
+      "model": "claude-sonnet-5-5",
+      "case_id": "partial_instruction/history0",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/custodian_extension/history15/repeat0",
+      "model": "claude-haiku-5-5",
+      "case_id": "custodian_extension/history15",
+      "repeat": 0
+    },
+    {
+      "job_id": "claude-haiku-5-5/revocation_prohibited/history0/repeat1",
+      "model": "claude-haiku-5-5",
+      "case_id": "revocation_prohibited/history0",
+      "repeat": 1
+    },
+    {
+      "job_id": "claude-sonnet-5-5/actual_waiver/history0/repeat1",
+      "model": "claude-sonnet-5-5",
+      "case_id": "actual_waiver/history0",
+      "repeat": 1
+    }
+  ],
+  "mock": false,
+  "python": "3.14.7 | packaged by Anaconda, Inc. | (main, Aug 14 2026, 10:13:42) [Clang 20.1.8 ]",
+  "source_sha256": "f3b70bbeac5197feebd4d82b8adc3df53c803a918480424561bc9e8db0f0d037",
+  "label_review_status": "UNREVIEWED DEVELOPMENT - reference-policy disagreements, not validated model errors"
+}

@@ -1,0 +1,86 @@
+{
+  "sources": {
+    "fraction": "https://www.erstebank.rs/content/dam/rs/ebs/www_erstebank_rs/Treasury/Dokumentacija/Kastodi/MT564_StandardRelease.pdf#page=9",
+    "payment": "https://www.clearstream.com/resource/blob/3284510/602acc72a8a8ec33788a1a03ecbc3d6e/c22039-future-processing-data.pdf",
+    "election": "https://webapp.sebgroup.com/mb/mblib.nsf/a-w/c97040f2db1f37b9c12580f00038b1ca/%24file/investor_world_corporate_actions_response_management_guide.pdf#page=16"
+  },
+  "cases": {
+    "fraction/100": {
+      "prompt": "Eligible holding: 100 shares. One new share per ten held. Fractions will be sold automatically on 17 June. Today is 10 June.\nGive whole_shares and fractional_shares as numbers, treatment as none/scheduled_sale/sold, and sale_cash_credited as evidenced/unconfirmed.",
+      "expected": {
+        "whole_shares": 10,
+        "fractional_shares": 0,
+        "treatment": "none",
+        "sale_cash_credited": "unconfirmed"
+      }
+    },
+    "fraction/105": {
+      "prompt": "Eligible holding: 105 shares. One new share per ten held. Fractions will be sold automatically on 17 June. Today is 10 June.\nGive whole_shares and fractional_shares as numbers, treatment as none/scheduled_sale/sold, and sale_cash_credited as evidenced/unconfirmed.",
+      "expected": {
+        "whole_shares": 10,
+        "fractional_shares": 0.5,
+        "treatment": "scheduled_sale",
+        "sale_cash_credited": "unconfirmed"
+      }
+    },
+    "payment/notice": {
+      "prompt": "As of 18 November, account A7, event D4. Dividend notice: payment date 18 November. Payment is conditional on receipt of funds.\nGive account_credit as confirmed/unconfirmed.",
+      "expected": {
+        "account_credit": "unconfirmed"
+      }
+    },
+    "payment/posting": {
+      "prompt": "As of 18 November, account A7, event D4. Dividend notice: payment date 18 November. Payment is conditional on receipt of funds. Cash ledger: posted credit, account A7, event D4, 18 November.\nGive account_credit as confirmed/unconfirmed.",
+      "expected": {
+        "account_credit": "confirmed"
+      }
+    },
+    "election/notice": {
+      "prompt": "Account B3, event E8. Dividend notification: option 001 pays cash, option 002 delivers shares. Eligible holding: 200 units.\nGive instructed_option as unknown/cash/shares, instructed_units as a number or null if unknown, acceptance and payment each as confirmed/unconfirmed.",
+      "expected": {
+        "instructed_option": "unknown",
+        "instructed_units": null,
+        "acceptance": "unconfirmed",
+        "payment": "unconfirmed"
+      }
+    },
+    "election/instruction": {
+      "prompt": "Account B3, event E8. Dividend notification: option 001 pays cash, option 002 delivers shares. Eligible holding: 200 units. Outgoing instruction sent: account B3, event E8, option 001, 200 units.\nGive instructed_option as unknown/cash/shares, instructed_units as a number or null if unknown, acceptance and payment each as confirmed/unconfirmed.",
+      "expected": {
+        "instructed_option": "cash",
+        "instructed_units": 200,
+        "acceptance": "unconfirmed",
+        "payment": "unconfirmed"
+      }
+    }
+  },
+  "schedule": [
+    [
+      "claude-sonnet-5-5",
+      "fraction/100"
+    ],
+    [
+      "claude-sonnet-5-5",
+      "election/instruction"
+    ],
+    [
+      "claude-sonnet-5-5",
+      "fraction/105"
+    ],
+    [
+      "claude-sonnet-5-5",
+      "payment/notice"
+    ],
+    [
+      "claude-sonnet-5-5",
+      "payment/posting"
+    ],
+    [
+      "claude-sonnet-5-5",
+      "election/notice"
+    ]
+  ],
+  "system": "Read the supplied account records. Report only what they establish. Return one JSON object with the requested keys. Use the supplied enumerations.",
+  "max_tokens": 512,
+  "source_sha256": "8f9c68498459d4cc1d19b8170b63fc5642044ff901d9ed0b4270fa0f0265683c"
+}

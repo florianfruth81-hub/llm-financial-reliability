@@ -1,0 +1,10 @@
+{
+  "protocol": "ca-history-development-v3",
+  "scorer": "ca-history-score-v3",
+  "created": "2026-11-09T23:17:56.677471+00:00",
+  "source_sha256": "f3b70bbeac5197feebd4d82b8adc3df53c803a918480424561bc9e8db0f0d037",
+  "cases_sha256": "09740b75824b246b728824356ef16e327e07d1144c85248e07c99241429180d3",
+  "policy_sha256": "e1a56c14daf243dc28031a85ea875c06ff00bd919a7ad224e452b66db2630b3a",
+  "design": "12 development templates x 3 history lengths x models x repeats; no independent holdout",
+  "limitations": "Author-labelled synthetic cases; references not independently validated."
+}

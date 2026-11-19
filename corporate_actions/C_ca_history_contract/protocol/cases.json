@@ -1,0 +1,4079 @@
+[
+  {
+    "id": "custodian_extension/history0",
+    "template": "custodian_extension",
+    "family": "deadline",
+    "history_length": 0,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Explicit amendment replacing only the deadline in D1 for Event E: custodian deadline is extended to 2026-11-10T14:00:00Z. Other terms unchanged."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D2"
+      ]
+    }
+  },
+  {
+    "id": "custodian_extension/history5",
+    "template": "custodian_extension",
+    "family": "deadline",
+    "history_length": 5,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Explicit amendment replacing only the deadline in D1 for Event E: custodian deadline is extended to 2026-11-10T14:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D2"
+      ]
+    }
+  },
+  {
+    "id": "custodian_extension/history15",
+    "template": "custodian_extension",
+    "family": "deadline",
+    "history_length": 15,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Explicit amendment replacing only the deadline in D1 for Event E: custodian deadline is extended to 2026-11-10T14:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D2"
+      ]
+    }
+  },
+  {
+    "id": "issuer_only_extension/history0",
+    "template": "issuer_only_extension",
+    "family": "deadline",
+    "history_length": 0,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Issuer deadline is extended to 2026-11-10T16:00:00Z. This changes no custodian deadline for Event E."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T11:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_late_exception",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_late_exception",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "issuer_only_extension/history5",
+    "template": "issuer_only_extension",
+    "family": "deadline",
+    "history_length": 5,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Issuer deadline is extended to 2026-11-10T16:00:00Z. This changes no custodian deadline for Event E."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T11:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_late_exception",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_late_exception",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "issuer_only_extension/history15",
+    "template": "issuer_only_extension",
+    "family": "deadline",
+    "history_length": 15,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E: custodian deadline is 2026-11-10T11:00:00Z. Other terms unchanged."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Issuer deadline is extended to 2026-11-10T16:00:00Z. This changes no custodian deadline for Event E."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T11:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_late_exception",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_late_exception",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_permitted/history0",
+    "template": "revocation_permitted",
+    "family": "revocation",
+    "history_length": 0,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is permitted. The applicable withdrawal window is open now."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "withdraw",
+      "quantity": 100,
+      "request_id": "WITHDRAW_R",
+      "allowed_decisions": [
+        {
+          "action": "withdraw",
+          "quantity": 100,
+          "request_id": "WITHDRAW_R"
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_permitted/history5",
+    "template": "revocation_permitted",
+    "family": "revocation",
+    "history_length": 5,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is permitted. The applicable withdrawal window is open now."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "withdraw",
+      "quantity": 100,
+      "request_id": "WITHDRAW_R",
+      "allowed_decisions": [
+        {
+          "action": "withdraw",
+          "quantity": 100,
+          "request_id": "WITHDRAW_R"
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_permitted/history15",
+    "template": "revocation_permitted",
+    "family": "revocation",
+    "history_length": 15,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is permitted. The applicable withdrawal window is open now."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "withdraw",
+      "quantity": 100,
+      "request_id": "WITHDRAW_R",
+      "allowed_decisions": [
+        {
+          "action": "withdraw",
+          "quantity": 100,
+          "request_id": "WITHDRAW_R"
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_prohibited/history0",
+    "template": "revocation_prohibited",
+    "family": "revocation",
+    "history_length": 0,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is NOT permitted. The applicable withdrawal window is open now."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": false,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain_and_notify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain_and_notify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_prohibited/history5",
+    "template": "revocation_prohibited",
+    "family": "revocation",
+    "history_length": 5,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is NOT permitted. The applicable withdrawal window is open now."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": false,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain_and_notify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain_and_notify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "revocation_prohibited/history15",
+    "template": "revocation_prohibited",
+    "family": "revocation",
+    "history_length": 15,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "withdraw",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: withdrawal is NOT permitted. The applicable withdrawal window is open now."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": false,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain_and_notify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain_and_notify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_accepted/history0",
+    "template": "timeout_accepted",
+    "family": "uncertain_submission",
+    "history_length": 0,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "accepted",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: accepted, quantity 100 CASH, account A/Event E. No other accepted instructions."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        },
+        {
+          "action": "retry_same_request",
+          "quantity": 100,
+          "request_id": "R"
+        },
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_accepted/history5",
+    "template": "timeout_accepted",
+    "family": "uncertain_submission",
+    "history_length": 5,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "accepted",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: accepted, quantity 100 CASH, account A/Event E. No other accepted instructions."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        },
+        {
+          "action": "retry_same_request",
+          "quantity": 100,
+          "request_id": "R"
+        },
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_accepted/history15",
+    "template": "timeout_accepted",
+    "family": "uncertain_submission",
+    "history_length": 15,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "accepted",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: accepted, quantity 100 CASH, account A/Event E. No other accepted instructions."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        },
+        {
+          "action": "retry_same_request",
+          "quantity": 100,
+          "request_id": "R"
+        },
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_not_found/history0",
+    "template": "timeout_not_found",
+    "family": "uncertain_submission",
+    "history_length": 0,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "not_found",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: not_found. No accepted instruction exists."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_not_found/history5",
+    "template": "timeout_not_found",
+    "family": "uncertain_submission",
+    "history_length": 5,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "not_found",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: not_found. No accepted instruction exists."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "timeout_not_found/history15",
+    "template": "timeout_not_found",
+    "family": "uncertain_submission",
+    "history_length": 15,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "R",
+        "lookup": {
+          "request_id": "R",
+          "status": "not_found",
+          "definitive": true,
+          "payload": {
+            "account": "A",
+            "event": "E",
+            "option": "CASH",
+            "quantity": 100
+          }
+        }
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: request R previously timed out. Definitive lookup observation for R: not_found. No accepted instruction exists."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "actual_waiver/history0",
+    "template": "actual_waiver",
+    "family": "certification",
+    "history_length": 0,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: certification has been waived with immediate effect for this event and account."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": false,
+        "certification_waived": true,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "actual_waiver/history5",
+    "template": "actual_waiver",
+    "family": "certification",
+    "history_length": 5,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: certification has been waived with immediate effect for this event and account."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": false,
+        "certification_waived": true,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "actual_waiver/history15",
+    "template": "actual_waiver",
+    "family": "certification",
+    "history_length": 15,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Explicit amendment to D0 for Event E/account A: certification has been waived with immediate effect for this event and account."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": false,
+        "certification_waived": true,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "possible_waiver/history0",
+    "template": "possible_waiver",
+    "family": "certification",
+    "history_length": 0,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: the agent MAY waive certification. No actual waiver has been announced."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_certification",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_certification",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D0",
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "possible_waiver/history5",
+    "template": "possible_waiver",
+    "family": "certification",
+    "history_length": 5,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: the agent MAY waive certification. No actual waiver has been announced."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_certification",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_certification",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D0",
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "possible_waiver/history15",
+    "template": "possible_waiver",
+    "family": "certification",
+    "history_length": 15,
+    "evidence_position": "early",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": false,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: the agent MAY waive certification. No actual waiver has been announced."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "request_certification",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "request_certification",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D0",
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "preserved_instruction/history0",
+    "template": "preserved_instruction",
+    "family": "existing_election",
+    "history_length": 0,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "preserved_instruction/history5",
+    "template": "preserved_instruction",
+    "family": "existing_election",
+    "history_length": 5,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "preserved_instruction/history15",
+    "template": "preserved_instruction",
+    "family": "existing_election",
+    "history_length": 15,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 100,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "retain",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "retain",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "partial_instruction/history0",
+    "template": "partial_instruction",
+    "family": "existing_election",
+    "history_length": 0,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 60,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 40,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 40,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "partial_instruction/history5",
+    "template": "partial_instruction",
+    "family": "existing_election",
+    "history_length": 5,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 60,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 40,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 40,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "partial_instruction/history15",
+    "template": "partial_instruction",
+    "family": "existing_election",
+    "history_length": 15,
+    "evidence_position": "middle",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 60,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E/account A: accepted elections remain valid. Additive submission of only the authorised remaining eligible quantity is permitted. Do not resubmit already accepted quantity."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 40,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 40,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "other_event_distractor/history0",
+    "template": "other_event_distractor",
+    "family": "identity_and_conflict",
+    "history_length": 0,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "F",
+          "account_id": "B",
+          "notice_ref": "F/B/D1",
+          "text": "Explicit amendment for Event F, account B only: CASH is prohibited and certification is waived. This does not amend Event E or account A."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D0"
+      ]
+    }
+  },
+  {
+    "id": "other_event_distractor/history5",
+    "template": "other_event_distractor",
+    "family": "identity_and_conflict",
+    "history_length": 5,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "F",
+          "account_id": "B",
+          "notice_ref": "F/B/D1",
+          "text": "Explicit amendment for Event F, account B only: CASH is prohibited and certification is waived. This does not amend Event E or account A."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D0"
+      ]
+    }
+  },
+  {
+    "id": "other_event_distractor/history15",
+    "template": "other_event_distractor",
+    "family": "identity_and_conflict",
+    "history_length": 15,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "F",
+          "account_id": "B",
+          "notice_ref": "F/B/D1",
+          "text": "Explicit amendment for Event F, account B only: CASH is prohibited and certification is waived. This does not amend Event E or account A."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": true,
+        "conflict": false
+      },
+      "action": "submit",
+      "quantity": 100,
+      "request_id": "SUBMIT_R",
+      "allowed_decisions": [
+        {
+          "action": "submit",
+          "quantity": 100,
+          "request_id": "SUBMIT_R"
+        }
+      ],
+      "target_accepted_quantity": 100,
+      "decisive_ids": [
+        "D0"
+      ]
+    }
+  },
+  {
+    "id": "same_event_conflict/history0",
+    "template": "same_event_conflict",
+    "family": "identity_and_conflict",
+    "history_length": 0,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS NOT permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": null,
+        "conflict": true
+      },
+      "action": "clarify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "clarify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1",
+        "D2"
+      ]
+    }
+  },
+  {
+    "id": "same_event_conflict/history5",
+    "template": "same_event_conflict",
+    "family": "identity_and_conflict",
+    "history_length": 5,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS NOT permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": null,
+        "conflict": true
+      },
+      "action": "clarify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "clarify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1",
+        "D2"
+      ]
+    }
+  },
+  {
+    "id": "same_event_conflict/history15",
+    "template": "same_event_conflict",
+    "family": "identity_and_conflict",
+    "history_length": 15,
+    "evidence_position": "late",
+    "split": "development",
+    "visible": {
+      "now": "2026-11-10T12:00:00Z",
+      "account": {
+        "account": "A",
+        "event": "E",
+        "option": "CASH",
+        "operation": "elect",
+        "authorised_quantity": 100,
+        "eligible_quantity": 100,
+        "accepted_quantity": 0,
+        "certificate_present": true,
+        "next_request_id": "SUBMIT_R"
+      },
+      "documents": [
+        {
+          "id": "D0",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D0",
+          "text": "Initial terms for Event E/account A, CASH: custodian deadline 2026-11-10T14:00:00Z; certification required; no waiver; elections revocable; CASH permitted. Additive submissions allowed. No unresolved conflict in D0."
+        },
+        {
+          "id": "X1",
+          "event_id": "X1",
+          "account_id": "Z",
+          "notice_ref": "X1/Z/archive",
+          "text": "Archived service bulletin 1 for unrelated Event X1, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X2",
+          "event_id": "X2",
+          "account_id": "Z",
+          "notice_ref": "X2/Z/archive",
+          "text": "Archived service bulletin 2 for unrelated Event X2, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X3",
+          "event_id": "X3",
+          "account_id": "Z",
+          "notice_ref": "X3/Z/archive",
+          "text": "Archived service bulletin 3 for unrelated Event X3, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X4",
+          "event_id": "X4",
+          "account_id": "Z",
+          "notice_ref": "X4/Z/archive",
+          "text": "Archived service bulletin 4 for unrelated Event X4, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X5",
+          "event_id": "X5",
+          "account_id": "Z",
+          "notice_ref": "X5/Z/archive",
+          "text": "Archived service bulletin 5 for unrelated Event X5, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X6",
+          "event_id": "X6",
+          "account_id": "Z",
+          "notice_ref": "X6/Z/archive",
+          "text": "Archived service bulletin 6 for unrelated Event X6, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X7",
+          "event_id": "X7",
+          "account_id": "Z",
+          "notice_ref": "X7/Z/archive",
+          "text": "Archived service bulletin 7 for unrelated Event X7, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X8",
+          "event_id": "X8",
+          "account_id": "Z",
+          "notice_ref": "X8/Z/archive",
+          "text": "Archived service bulletin 8 for unrelated Event X8, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X9",
+          "event_id": "X9",
+          "account_id": "Z",
+          "notice_ref": "X9/Z/archive",
+          "text": "Archived service bulletin 9 for unrelated Event X9, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X10",
+          "event_id": "X10",
+          "account_id": "Z",
+          "notice_ref": "X10/Z/archive",
+          "text": "Archived service bulletin 10 for unrelated Event X10, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X11",
+          "event_id": "X11",
+          "account_id": "Z",
+          "notice_ref": "X11/Z/archive",
+          "text": "Archived service bulletin 11 for unrelated Event X11, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X12",
+          "event_id": "X12",
+          "account_id": "Z",
+          "notice_ref": "X12/Z/archive",
+          "text": "Archived service bulletin 12 for unrelated Event X12, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X13",
+          "event_id": "X13",
+          "account_id": "Z",
+          "notice_ref": "X13/Z/archive",
+          "text": "Archived service bulletin 13 for unrelated Event X13, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X14",
+          "event_id": "X14",
+          "account_id": "Z",
+          "notice_ref": "X14/Z/archive",
+          "text": "Archived service bulletin 14 for unrelated Event X14, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "X15",
+          "event_id": "X15",
+          "account_id": "Z",
+          "notice_ref": "X15/Z/archive",
+          "text": "Archived service bulletin 15 for unrelated Event X15, account Z. Contact desk routing changed. This does not amend Event E or any current election terms."
+        },
+        {
+          "id": "D1",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D1",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        },
+        {
+          "id": "D2",
+          "event_id": "E",
+          "account_id": "A",
+          "notice_ref": "E/A/D2",
+          "text": "Event E: this notice replaces D0 only on CASH eligibility; CASH IS NOT permitted. D1 and D2 are equally authoritative current notices; neither replaces the other."
+        }
+      ]
+    },
+    "reference": {
+      "terms": {
+        "custodian_deadline_utc": "2026-11-10T14:00:00Z",
+        "certification_required": true,
+        "certification_waived": false,
+        "revocable": true,
+        "cash_permitted": null,
+        "conflict": true
+      },
+      "action": "clarify",
+      "quantity": 0,
+      "request_id": null,
+      "allowed_decisions": [
+        {
+          "action": "clarify",
+          "quantity": 0,
+          "request_id": null
+        }
+      ],
+      "target_accepted_quantity": 0,
+      "decisive_ids": [
+        "D1",
+        "D2"
+      ]
+    }
+  }
+]

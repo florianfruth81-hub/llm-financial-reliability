@@ -1,0 +1,9 @@
+SYNTHETIC CORPORATE-ACTION PRESENTATION STUDY
+References are AI-assisted and unreviewed. Three repeats reuse six scenarios.
+Citation matching checks predefined supporting ID sets.
+model / presentation | answers / planned | format | decision correct / scorable | citation correct / scorable
+claude-haiku-5-5 / inline | 18 / 18 | 16 | 16 / 16 | 8 / 16
+claude-haiku-5-5 / blocks | 18 / 18 | 18 | 18 / 18 | 13 / 18
+claude-haiku-5-5 / json | 18 / 18 | 18 | 18 / 18 | 12 / 18
+Collected 54/54; uncertain attempts 0; pending 0.
+Unscorable and missing responses remain outside correct-answer counts.
