@@ -1,0 +1,22 @@
+{
+  "model_incomplete": {
+    "archive_folder": "v14/treasury_20261118T203501860658Z/",
+    "recorded_source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+    "actual_source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+    "scenario": "sustained_20bd",
+    "seed": 42,
+    "days": 28,
+    "policy": "model",
+    "tape_sha256": "5b80d93b3e47ae607d0f90d973888224935067ebd6ce980ba2b36ae7faf65ab8"
+  },
+  "cash_reserve_complete": {
+    "archive_folder": "v14/treasury_20261118T223753986770Z/",
+    "recorded_source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+    "actual_source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+    "scenario": "sustained_20bd",
+    "seed": 42,
+    "days": 28,
+    "policy": "cash_reserve",
+    "tape_sha256": "5b80d93b3e47ae607d0f90d973888224935067ebd6ce980ba2b36ae7faf65ab8"
+  }
+}

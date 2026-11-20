@@ -1,0 +1,87 @@
+[
+  {
+    "archive_folder": "v9/autonomy_20261111T122426974151Z/",
+    "publication_folder": "offline_reference",
+    "mode": "offline_reference",
+    "guidance": false,
+    "complete": true,
+    "source_sha256_recorded": "b3626e5bb11aa20a956a66a6653e7064d1c1a8a126f569b42d503772374c94c1",
+    "source_sha256_actual": "b3626e5bb11aa20a956a66a6653e7064d1c1a8a126f569b42d503772374c94c1",
+    "arms": {
+      "full_workflow": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      },
+      "route_and_funding": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      },
+      "route_only": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      }
+    }
+  },
+  {
+    "archive_folder": "v9/autonomy_20261111T122743112849Z/",
+    "publication_folder": "model_unguided",
+    "mode": "live",
+    "guidance": false,
+    "complete": true,
+    "source_sha256_recorded": "b4437df9c0c3e4cb3ddc46ed046ca55e1e8b497ccf51a3df8a70f56e6bb96d38",
+    "source_sha256_actual": "b4437df9c0c3e4cb3ddc46ed046ca55e1e8b497ccf51a3df8a70f56e6bb96d38",
+    "arms": {
+      "full_workflow": {
+        "on_time": 8,
+        "missed_ids": [
+          "D1-CHF-MORTGAGE"
+        ],
+        "floor_breach_checkpoints": 0
+      },
+      "route_and_funding": {
+        "on_time": 8,
+        "missed_ids": [
+          "D1-CHF-MORTGAGE"
+        ],
+        "floor_breach_checkpoints": 0
+      },
+      "route_only": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      }
+    }
+  },
+  {
+    "archive_folder": "v9/autonomy_20261111T143614812908Z/",
+    "publication_folder": "model_guided",
+    "mode": "live",
+    "guidance": true,
+    "complete": true,
+    "source_sha256_recorded": "238460cf6832552f170269b4c0e0b90110033c54500cd406a0067b7e4242a01d",
+    "source_sha256_actual": "238460cf6832552f170269b4c0e0b90110033c54500cd406a0067b7e4242a01d",
+    "arms": {
+      "full_workflow": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      },
+      "route_and_funding": {
+        "on_time": 7,
+        "missed_ids": [
+          "D1-USD-1",
+          "D1-USD-2"
+        ],
+        "floor_breach_checkpoints": 0
+      },
+      "route_only": {
+        "on_time": 9,
+        "missed_ids": [],
+        "floor_breach_checkpoints": 0
+      }
+    }
+  }
+]

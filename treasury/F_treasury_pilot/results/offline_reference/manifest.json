@@ -1,0 +1,557 @@
+{
+  "authorities": {
+    "full_workflow": "Choose the entire sequence, amounts and timing at each checkpoint.",
+    "route_and_funding": "Choose payment rails and funding actions. The controller fixes the allowed funding checkpoints, executes funding in the listed operation order (borrow, redeem, cashout, repay, fx), determines payment timing, and manages investment.",
+    "route_only": "Choose rails for open obligations using pay actions. The controller decides funding, investment, and when payments can be initiated."
+  },
+  "funding_hours": {
+    "borrow": [
+      7,
+      9,
+      10
+    ],
+    "cashout": [
+      7,
+      10,
+      11,
+      12,
+      16
+    ],
+    "fx": [
+      7,
+      9,
+      10
+    ],
+    "redeem": [
+      9
+    ],
+    "repay": [
+      16
+    ]
+  },
+  "guardrails": {
+    "reserve_known_payments": [
+      true,
+      true,
+      true
+    ],
+    "standard": [
+      true,
+      true,
+      false
+    ],
+    "without_cash_floor": [
+      false,
+      true,
+      false
+    ],
+    "without_deadline_gate": [
+      true,
+      false,
+      false
+    ]
+  },
+  "max_output": 2048,
+  "mode": "offline_reference",
+  "model": null,
+  "planned_decisions": 45,
+  "rules": "Floors USD/CHF200000000 cents each. Amounts are integer cents. Available core excludes\ntransit, MMF, TD and collateral. Subscription via TD only. Mint coreUSD->TD settles+1h;\nsubscribe TD->MMF+1h accepted16..21; redeem MMF->TD+1h accepted07..10;\ncashout TD->coreUSD+1h accepted07..17. Late/partial redemption is possible; never assume credit.\nBorrow CHF against80% collateral, settles+1h; repay outstanding CHF loan+1h releases collateral.\nNo FX or core conversion outside07..17. FX quotes CHF per USD. All payments due12.\nPay full obligation from core; USD fee TD18,stable30,correspondent20 dollars. Digital+1h,\ncorrespondent+2h and07..17. Recipient TD eligibility shown. CHF domestic+1h/no fee.\nKeep2m core per currency after every outgoing action. Known payments should be reserved before\ninvesting; may use confirmed receipts/credited cash, never pending funds. Unpaid deadlines fail.\nAt07 next day interest from confirmed overnight MMF balance credits TD. MMF yield ACT/360.\nUse current cash plus timely recovery/borrowing to meet payments. Repay surplus borrowing.\nAfter16 invest excess USD above floor when no current unpaid obligations. At20 subscribe TD.\nAt09 redeem existing MMF; at10 or later cashout TD so payments can settle before12.\nAny missing or blocked operation can cause a missed payment; escalation alone does not complete it.",
+  "scenario": "desk_and_mortgage",
+  "settings": {
+    "output_config": {
+      "effort": "medium"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "source_sha256": "b3626e5bb11aa20a956a66a6653e7064d1c1a8a126f569b42d503772374c94c1",
+  "system": "You operate a synthetic bank treasury. Only the supplied current state and synthetic\nrules are authoritative. Do not predict unseen events. Propose operations, never invent settlements.\nReturn JSON with: actions (array, max8), available_core (object USD/CHF integer cents), reason (string).\nEach action has exactly id, op, amount, currency, rail, target. Use unique id per operation.\nop: wait, mint, subscribe, redeem, cashout, pay, borrow, repay, fx.\nFor mint/subscribe/redeem/cashout currency=USD, rail=\"\", target=\"\".\nFor borrow/repay currency=CHF, rail=\"\", target=\"\".\nFor pay currency is obligation currency, target its ID, amount its full outstanding cents;\nrail USD: tokenized_deposit/stablecoin/correspondent; CHF: domestic.\nFor fx currency is SOURCE, target destination currency USD or CHF, rail=\"\".\nFor wait amount=0,currency=USD,rail=\"\",target=\"\" (or return empty actions).\nReport available_core BEFORE actions. Minimize missed payments and violations first,\nthen unnecessary borrowing/fees and idle excess cash. Interest is secondary to liquidity.\nAmounts integer cents, not millions. Explain briefly. No markdown required.\nThe payment quotes in the current state supersede the generic route fees\nand delays above. Each quote gives time to beneficiary credit in hours and fee in the payment\ncurrency's cents. Funds in transit are not settled cash. In limited authority arms a pay action\nselects the rail for the exact open obligation; the controller initiates it only at a payable\ncheckpoint. Submit the rail choice again if the obligation remains open. Omitting a choice\nholds that payment at this checkpoint. Do not use action IDs starting with policy-.\nThis scenario uses fixed Zurich winter time (CET = UTC+1).\nThe desk opens at 08:00 CET and closes at 18:00 CET. The final initiation\ncheckpoint is 17:00 CET, leaving a one-hour buffer for borrowing, repayment,\nspot FX, tokenized deposit cashout and correspondent payment submissions.\nPayment rails and MMF operations otherwise follow their own quoted windows.\nNo CHF collateral is initially available. Confirmed release at 22:00 CET\non Day 0 makes CHF 3m eligible as collateral. Cash remains unchanged.\nThe 80% advance cap and one-hour loan settlement delay still apply.\nThe Day 1 mortgage is announced at Day 0 17:00 CET, can be released from\nDay 1 08:00 CET and must credit by Day 1 11:00 CET. Its deadline and these\ndesk rules override the generic schedule. Each checkpoint includes an\noperational event. Ordinary payments are distinct obligations with their own\namounts and deadlines. Use the latest quotes, eligibility and credit times.",
+  "tape": [
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 7,
+      "new_obligations": [
+        {
+          "amount": 385000000,
+          "currency": "USD",
+          "due": 11,
+          "id": "D0-USD-1",
+          "kind": "securities_settlement"
+        },
+        {
+          "amount": 315000000,
+          "currency": "USD",
+          "due": 12,
+          "id": "D0-USD-2",
+          "kind": "client_transfer"
+        },
+        {
+          "amount": 20000000,
+          "currency": "CHF",
+          "due": 12,
+          "id": "D0-CHF-1",
+          "kind": "client_transfer"
+        },
+        {
+          "amount": 30000000,
+          "currency": "CHF",
+          "due": 12,
+          "id": "D0-CHF-2",
+          "kind": "operating_payment"
+        }
+      ],
+      "operational_event": "Cash desk opens and confirmed overnight cash movements post.",
+      "spot": 0.88,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 1800,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 9,
+      "operational_event": "Intraday spot FX quote refresh.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 1800,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 10,
+      "operational_event": "Tokenized-deposit provider updates its payment fee.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 11,
+      "operational_event": "Correspondent bank revises its estimated time to beneficiary credit.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 3
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 12,
+      "operational_event": "USD tokenized-deposit payment rail enters a maintenance window.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 3
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 16,
+      "new_obligations": [
+        {
+          "amount": 800000000,
+          "currency": "CHF",
+          "due": 34,
+          "id": "D1-CHF-MORTGAGE",
+          "kind": "mortgage_disbursement",
+          "not_before": 31
+        }
+      ],
+      "operational_event": "Cash desk reaches the final submission checkpoint for the day.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 3
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.04,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "day": 0,
+      "hour": 20,
+      "operational_event": "USD MMF publishes its overnight rate.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 3
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.041,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 900000000,
+      "chf_rate": 0.01,
+      "chf_receipt": 0,
+      "collateral_release_chf_cents": 300000000,
+      "day": 0,
+      "hour": 21,
+      "operational_event": "Confirmed release of CHF 3m in eligible collateral.",
+      "spot": 0.881,
+      "td_eligible": true,
+      "usd_due": 700000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 3
+        },
+        "stablecoin": {
+          "fee_cents": 3000,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 2200,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.041,
+      "usd_receipt": 0
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 7,
+      "new_obligations": [
+        {
+          "amount": 222000000,
+          "currency": "USD",
+          "due": 36,
+          "id": "D1-USD-1",
+          "kind": "securities_settlement"
+        },
+        {
+          "amount": 148000000,
+          "currency": "USD",
+          "due": 36,
+          "id": "D1-USD-2",
+          "kind": "client_transfer"
+        },
+        {
+          "amount": 45000000,
+          "currency": "CHF",
+          "due": 36,
+          "id": "D1-CHF-1",
+          "kind": "client_transfer"
+        },
+        {
+          "amount": 55000000,
+          "currency": "CHF",
+          "due": 36,
+          "id": "D1-CHF-2",
+          "kind": "operating_payment"
+        }
+      ],
+      "operational_event": "Cash desk opens and confirmed overnight cash movements post.",
+      "spot": 0.87,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 2500,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 9,
+      "operational_event": "Intraday spot FX quote refresh.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 2500,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 10,
+      "operational_event": "Tokenized-deposit provider updates its payment fee.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 2
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 3000,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 11,
+      "operational_event": "Correspondent bank revises its estimated time to beneficiary credit.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 4
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "fee_cents": 3000,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 12,
+      "operational_event": "USD tokenized-deposit payment rail enters a maintenance window.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 4
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 3000,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 16,
+      "operational_event": "Cash desk reaches the final submission checkpoint for the day.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 4
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 3000,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.034,
+      "usd_receipt": 100000000
+    },
+    {
+      "chf_due": 50000000,
+      "chf_rate": 0.012,
+      "chf_receipt": 50000000,
+      "day": 1,
+      "hour": 20,
+      "operational_event": "USD MMF publishes its overnight rate.",
+      "spot": 0.869,
+      "td_eligible": true,
+      "usd_due": 370000000,
+      "usd_rail_quotes": {
+        "correspondent": {
+          "fee_cents": 2000,
+          "hours": 4
+        },
+        "stablecoin": {
+          "fee_cents": 1200,
+          "hours": 1
+        },
+        "tokenized_deposit": {
+          "eligible": false,
+          "fee_cents": 3000,
+          "hours": 1
+        }
+      },
+      "usd_rate": 0.033,
+      "usd_receipt": 100000000
+    }
+  ],
+  "tape_sha256": "75ef1631737602452d2445b6909b5c1cf89758e691a38b6b34e74ceb777d460d",
+  "version": "autonomy-1.0"
+}

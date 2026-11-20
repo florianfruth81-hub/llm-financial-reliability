@@ -1,0 +1,520 @@
+{
+  "arms": {
+    "full_workflow": {
+      "reserve_known_payments": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 800000000,
+            "USD": 229994000
+          },
+          "ending_loan_chf_cents": 0,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {
+            "cannot meet deadline": 1,
+            "cash floor / unavailable proceeds": 2
+          },
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 0,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 0,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "standard": {
+        "changed_admissions": [],
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 800000000,
+            "USD": 229994000
+          },
+          "ending_loan_chf_cents": 0,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {
+            "cannot meet deadline": 1,
+            "cash floor / unavailable proceeds": 2
+          },
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 0,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 0,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_cash_floor": {
+        "changed_admissions": [
+          {
+            "action": {
+              "amount": 800000000,
+              "currency": "CHF",
+              "id": "d1-pay-mortgage",
+              "op": "pay",
+              "rail": "domestic",
+              "target": "D1-CHF-MORTGAGE"
+            },
+            "index": 0,
+            "replay": null,
+            "standard": "cash floor / unavailable proceeds",
+            "step": 8
+          }
+        ],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 7,
+          "missed_deadlines": -1,
+          "paid_on_time": 1,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": 8,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 0,
+            "USD": 229994000
+          },
+          "ending_loan_chf_cents": 0,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {
+            "obligation scope/status/amount": 2
+          },
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 7,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [],
+          "mmf_income_usd_cents": 0,
+          "paid_late_ids": [],
+          "paid_on_time": 9,
+          "paid_or_pending_routes": {
+            "domestic": 5,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 0,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_deadline_gate": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 800000000,
+            "USD": 229994000
+          },
+          "ending_loan_chf_cents": 0,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {
+            "cash floor / unavailable proceeds": 3
+          },
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 0,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 0,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      }
+    },
+    "route_and_funding": {
+      "reserve_known_payments": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 1040000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 240000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 1,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 2,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "standard": {
+        "changed_admissions": [],
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 1040000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 240000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 1,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 2,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_cash_floor": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 1040000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 240000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 1,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 2,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_deadline_gate": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 0,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 1040000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 240000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 1,
+          "missed_deadline_ids": [
+            "D1-CHF-MORTGAGE"
+          ],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 8,
+          "paid_or_pending_routes": {
+            "domestic": 4,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 2,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      }
+    },
+    "route_only": {
+      "reserve_known_payments": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 1,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 200000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 200000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 9,
+          "paid_or_pending_routes": {
+            "domestic": 5,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "standard": {
+        "changed_admissions": [],
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 1,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 200000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 200000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 9,
+          "paid_or_pending_routes": {
+            "domestic": 5,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_cash_floor": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 1,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 200000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 200000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 9,
+          "paid_or_pending_routes": {
+            "domestic": 5,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      },
+      "without_deadline_gate": {
+        "changed_admissions": [],
+        "delta_vs_standard": {
+          "floor_breach_checkpoints": 0,
+          "missed_deadlines": 0,
+          "paid_on_time": 0,
+          "route_fees_usd_cents": 0
+        },
+        "first_state_divergence": null,
+        "metrics": {
+          "avoidable_route_fees_usd_cents": 0,
+          "balance_claim_mismatches": 1,
+          "checkpoints": 15,
+          "ending_cash_cents": {
+            "CHF": 200000000,
+            "USD": 200000000
+          },
+          "ending_loan_chf_cents": 200000000,
+          "ending_mmf_usd_cents": 0,
+          "ending_td_usd_cents": 0,
+          "execution_blocks": {},
+          "financing_cost_chf_cents": 0,
+          "floor_breach_checkpoints": 0,
+          "invalid_responses": 0,
+          "missed_deadline_ids": [],
+          "mmf_income_usd_cents": 34166,
+          "paid_late_ids": [],
+          "paid_on_time": 9,
+          "paid_or_pending_routes": {
+            "domestic": 5,
+            "stablecoin": 2,
+            "tokenized_deposit": 2
+          },
+          "payments_revealed": 9,
+          "pending_operations": 1,
+          "recovered_responses": 0,
+          "route_fees_usd_cents": 6000,
+          "scope_rejections": 0
+        }
+      }
+    }
+  },
+  "complete": true,
+  "matched_checkpoints": 15,
+  "mode": "live",
+  "replay_interpretation": "Fixed-action counterfactuals. Both model and controller actions are frozen at their observed standard-guardrail choices. Results after state divergence do not measure adaptation under a different guardrail.",
+  "tape_sha256": "75ef1631737602452d2445b6909b5c1cf89758e691a38b6b34e74ceb777d460d",
+  "usage": {
+    "input_tokens": 108930,
+    "output_tokens": 18032
+  }
+}
