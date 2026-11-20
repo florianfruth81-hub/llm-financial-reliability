@@ -1,0 +1,407 @@
+{
+  "title": "Study H \u2014 offline checkpoint recovery counterfactual",
+  "protocol": "Post-hoc intervention, NOT a preregistered evaluation, NOT a model-generated recovery or independent run.",
+  "source_sha256": "d77017cff1f4f198f09ed611ededb1041b1561933de07427527cf86870518cb7",
+  "tape_sha256": "5b80d93b3e47ae607d0f90d973888224935067ebd6ce980ba2b36ae7faf65ab8",
+  "checkpoint": 570,
+  "replayed_prior_checkpoints": 213,
+  "replayed_prior_actions": 292,
+  "state_and_action_replay": "EXACT_MATCH on six state groups and all logged action results",
+  "multiple_documents": 2,
+  "original_parser_rejects_ambiguity": true,
+  "first_document_diagnostic": {
+    "mint_cents": 9689699300,
+    "all_actions_executable": true,
+    "actions": [
+      {
+        "action": {
+          "id": "p570-dom",
+          "op": "pay_batch",
+          "payments": [
+            "S23-DOM-4",
+            "S23-DOM-10",
+            "S23-DOM-16",
+            "S23-DOM-22",
+            "S23-DOM-28",
+            "S23-DOM-34",
+            "S23-DOM-40",
+            "S23-DOM-46",
+            "S23-DOM-52",
+            "S23-DOM-58"
+          ],
+          "route": "domestic"
+        },
+        "result": {
+          "ok": true,
+          "children": [
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            }
+          ]
+        }
+      },
+      {
+        "action": {
+          "id": "p570-mint-td",
+          "op": "mint",
+          "ccy": "USD",
+          "asset": "td",
+          "amount": 9689699300
+        },
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "action": {
+          "id": "p570-repay",
+          "op": "repay",
+          "ccy": "USD",
+          "amount": 2000067580
+        },
+        "result": {
+          "ok": true
+        }
+      }
+    ],
+    "after": {
+      "t": 570,
+      "on_time": 917,
+      "due": 1136,
+      "not_on_time_due": 219,
+      "core_cash_cents": 4280105457,
+      "floor_cents": 2500000000,
+      "blocked": 0,
+      "floor_breach_hours": 0
+    },
+    "note": "ISOLATED diagnostic on a copy. Never executed in historical run."
+  },
+  "corrected_document": {
+    "mint_cents": 96896993,
+    "actions": [
+      {
+        "action": {
+          "id": "p570-dom",
+          "op": "pay_batch",
+          "payments": [
+            "S23-DOM-4",
+            "S23-DOM-10",
+            "S23-DOM-16",
+            "S23-DOM-22",
+            "S23-DOM-28",
+            "S23-DOM-34",
+            "S23-DOM-40",
+            "S23-DOM-46",
+            "S23-DOM-52",
+            "S23-DOM-58"
+          ],
+          "route": "domestic"
+        },
+        "result": {
+          "ok": true,
+          "children": [
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            },
+            {
+              "ok": true
+            }
+          ]
+        }
+      },
+      {
+        "action": {
+          "id": "p570-mint-td-b",
+          "op": "mint",
+          "ccy": "USD",
+          "asset": "td",
+          "amount": 96896993
+        },
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "action": {
+          "id": "p570-repay-b",
+          "op": "repay",
+          "ccy": "USD",
+          "amount": 2000067580
+        },
+        "result": {
+          "ok": true
+        }
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "condition": "A original fail-closed termination",
+      "recovered": false,
+      "t570": {
+        "t": 570,
+        "on_time": 917,
+        "due": 1136,
+        "not_on_time_due": 219,
+        "core_cash_cents": 16020656548,
+        "floor_cents": 2500000000,
+        "blocked": 0,
+        "floor_breach_hours": 0
+      },
+      "end": {
+        "t": 570,
+        "on_time": 917,
+        "due": 1136,
+        "not_on_time_due": 219,
+        "core_cash_cents": 16020656548,
+        "floor_cents": 2500000000,
+        "blocked": 0,
+        "floor_breach_hours": 0
+      },
+      "note": "Original parser rejected two conflicting JSON documents. No instructions executed at t=570."
+    },
+    {
+      "condition": "B select recorded correction + deterministic future",
+      "recovered": true,
+      "t570": {
+        "t": 570,
+        "on_time": 917,
+        "due": 1136,
+        "not_on_time_due": 219,
+        "core_cash_cents": 13872907764,
+        "floor_cents": 2500000000,
+        "blocked": 0,
+        "floor_breach_hours": 0
+      },
+      "end": {
+        "t": 671,
+        "on_time": 1076,
+        "due": 1295,
+        "not_on_time_due": 219,
+        "core_cash_cents": 13724992218,
+        "floor_cents": 2500000000,
+        "blocked": 0,
+        "floor_breach_hours": 0
+      },
+      "actions_at_570": [
+        {
+          "action": {
+            "id": "p570-dom",
+            "op": "pay_batch",
+            "payments": [
+              "S23-DOM-4",
+              "S23-DOM-10",
+              "S23-DOM-16",
+              "S23-DOM-22",
+              "S23-DOM-28",
+              "S23-DOM-34",
+              "S23-DOM-40",
+              "S23-DOM-46",
+              "S23-DOM-52",
+              "S23-DOM-58"
+            ],
+            "route": "domestic"
+          },
+          "result": {
+            "ok": true,
+            "children": [
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              }
+            ]
+          }
+        },
+        {
+          "action": {
+            "id": "p570-mint-td-b",
+            "op": "mint",
+            "ccy": "USD",
+            "asset": "td",
+            "amount": 96896993
+          },
+          "result": {
+            "ok": true
+          }
+        },
+        {
+          "action": {
+            "id": "p570-repay-b",
+            "op": "repay",
+            "ccy": "USD",
+            "amount": 2000067580
+          },
+          "result": {
+            "ok": true
+          }
+        }
+      ],
+      "description": "Oracle selects second JSON document, validates through real executor; remaining checkpoints use deterministic cash_reserve."
+    },
+    {
+      "condition": "C checkpoint fallback + deterministic future",
+      "recovered": true,
+      "t570": {
+        "t": 570,
+        "on_time": 917,
+        "due": 1136,
+        "not_on_time_due": 219,
+        "core_cash_cents": 15969872437,
+        "floor_cents": 2500000000,
+        "blocked": 0,
+        "floor_breach_hours": 0
+      },
+      "end": {
+        "t": 671,
+        "on_time": 1074,
+        "due": 1295,
+        "not_on_time_due": 221,
+        "core_cash_cents": 15821960491,
+        "floor_cents": 2500000000,
+        "blocked": 2,
+        "floor_breach_hours": 0
+      },
+      "actions_at_570": [
+        {
+          "action": {
+            "id": "cash_reserve-570-0",
+            "op": "pay_batch",
+            "payments": [
+              "S23-DOM-4",
+              "S23-DOM-10",
+              "S23-DOM-16",
+              "S23-DOM-22",
+              "S23-DOM-28",
+              "S23-DOM-34",
+              "S23-DOM-40",
+              "S23-DOM-46",
+              "S23-DOM-52",
+              "S23-DOM-58"
+            ],
+            "route": "domestic"
+          },
+          "result": {
+            "ok": true,
+            "children": [
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              },
+              {
+                "ok": true
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Discard both ambiguous documents, use cash_reserve immediately at 570; remaining checkpoints use same policy."
+    }
+  ],
+  "cautions": [
+    "Historical pre-570 missed payments are not repaired.",
+    "B uses post-hoc selection of an already recorded correction; this is NOT autonomous self-recovery.",
+    "B/C deterministic continuation is a new hybrid controller, not a continuation of model policy.",
+    "Only one tape and one observed agent trajectory; no statistical inference.",
+    "Successful executor validation does not guarantee business-intent correctness."
+  ]
+}
